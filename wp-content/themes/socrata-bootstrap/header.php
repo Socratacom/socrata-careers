@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 navbar-header">           
-          <a class="color-logo lg-logo" href="<?php echo home_url('/'); ?>"></a>
+          <a class="color-logo lg-logo" href="<?php echo home_url('/'); ?>"></a>cheese
           <!-- Mobile Menu -->
           <ul id="gn-menu" class="gn-menu-main hidden-sm hidden-md hidden-lg">
             <li class="gn-trigger">
