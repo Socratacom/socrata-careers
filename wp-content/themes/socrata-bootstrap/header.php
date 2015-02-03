@@ -17,27 +17,33 @@
 <header>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12 navbar-header">           
-          <a class="color-logo lg-logo" href="<?php echo home_url('/'); ?>"></a>cheese
-          <!-- Mobile Menu -->
-          <ul id="gn-menu" class="gn-menu-main hidden-sm hidden-md hidden-lg">
-            <li class="gn-trigger">
-              <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-              <nav class="gn-menu-wrapper">
-                <div class="gn-scroller">
-                  <ul class="gn-menu">         
-                    <li><?php wp_nav_menu( array( 
-                          'theme_location' => 'persona',
-                          'depth' => -1,
-                          )); ?></li>                   
-                  </ul>
-                </div><!-- /gn-scroller -->
-              </nav>
-            </li>
-          </ul> 
-        </div><!-- /.navbar-header -->   
-      </div> 
+         
+      <a class="white-logo header-logo" href="<?php echo home_url('/'); ?>"></a>
+      <a class="corporate-link"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Socrata.com</a>
+      <!-- Main Menu -->
+      <ul id="main-menu">
+        <li><a href="#">Why Socrata?</a></li>
+        <li><a href="#">Team &amp; Culture</a></li>
+        <li><a href="#">Engineers</a></li>
+        <li><a href="#">Jobs</a></li>
+      </ul>
+      <!-- Mobile Menu -->
+      <ul id="gn-menu" class="gn-menu-main hidden-sm hidden-md hidden-lg">
+        <li class="gn-trigger">
+          <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+          <nav class="gn-menu-wrapper">
+            <div class="gn-scroller">
+              <ul class="gn-menu">         
+                <li><?php wp_nav_menu( array( 
+                      'theme_location' => 'persona',
+                      'depth' => -1,
+                      )); ?></li>                   
+              </ul>
+            </div><!-- /gn-scroller -->
+          </nav>
+        </li>
+      </ul> 
+
     </div>
   </nav>
 </header>
