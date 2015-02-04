@@ -4,21 +4,20 @@ Template Name: Homepage
 */
 get_header(); ?>
 <div id="page">
-	<section style="height:300px; background:#ccc; position: relative;">
-	<svg id="" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; left:0; bottom:0;">
-				<path id="trianglePath1" d="M0 0 L50 100 L100 0 Z"></path>
-				<path id="trianglePath2" d="M50 100 L100 40 L100 0 Z"></path>
-			</svg>
-			</section>
-	<div class="container content">
-		<div class="row"> cheese
-			<div class="col-xs-12">
-		  		<?php if(have_posts()): while(have_posts()): the_post();?>
-	          	<?php the_content()?>
-		        <?php endwhile; ?>
-		        <?php endif;?>
-			</div>
-		</div>
-	</div>
+	<section class="video-background">
+		<svg class="section-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+			<path class="white-path" d="M0 10 L50 100 L0 100 Z"></path>
+			<path class="blue-path" d="M51 100 L100 100 L100 10 Z"></path>
+			<path class="white-path" d="M50 100 L100 100 L100 50 Z"></path>
+		</svg>
+	</section>
+	<section class="text-block">
+		<h1>Core value statement. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
+	</section>
+	<section class="call-to-action">d
+		<svg class="section-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+			<path class="white-path" d="M0 50 L100 100 L0 100 Z"></path>
+		</svg>
+	</section>	
 </div>
 <?php get_footer(); ?>

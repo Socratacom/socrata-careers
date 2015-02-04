@@ -22,7 +22,7 @@
       <a class="corporate-link" href="http://socrata.com"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Socrata.com</a>
       <!-- Main Menu -->
       <ul id="main-menu" class="hidden-xs">
-        <li><a href="#">Why Socrata?</a></li>
+        <li><a href="/why-socrata">Why Socrata?</a></li>
         <li><a href="#">Team &amp; Culture</a></li>
         <li><a href="#">Engineers</a></li>
         <li><a href="#">Jobs</a></li>
