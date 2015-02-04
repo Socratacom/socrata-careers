@@ -19,9 +19,9 @@
     <div class="container">
          
       <a class="white-logo header-logo" href="<?php echo home_url('/'); ?>"></a>
-      <a class="corporate-link"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Socrata.com</a>
+      <a class="corporate-link" href="http://socrata.com"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Socrata.com</a>
       <!-- Main Menu -->
-      <ul id="main-menu">
+      <ul id="main-menu" class="hidden-xs">
         <li><a href="#">Why Socrata?</a></li>
         <li><a href="#">Team &amp; Culture</a></li>
         <li><a href="#">Engineers</a></li>
@@ -34,10 +34,10 @@
           <nav class="gn-menu-wrapper">
             <div class="gn-scroller">
               <ul class="gn-menu">         
-                <li><?php wp_nav_menu( array( 
-                      'theme_location' => 'persona',
-                      'depth' => -1,
-                      )); ?></li>                   
+                <li><a href="#">Why Socrata?</a></li>
+                <li><a href="#">Team &amp; Culture</a></li>
+                <li><a href="#">Engineers</a></li>
+                <li><a href="#">Jobs</a></li>                   
               </ul>
             </div><!-- /gn-scroller -->
           </nav>
