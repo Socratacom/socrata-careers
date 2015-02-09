@@ -14,7 +14,20 @@ get_header(); ?>
 	<section class="text-block">
 		<h1>Core value statement. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
 	</section>
-	<section class="call-to-action">d
+	<section class="cta-jobs">
+		<div class="container">
+			<div class="row cta-wrapper">
+				<div class="col-sm-2 col-xs-12 vertical-center">
+					<div class="stuart-1"></div>
+				</div>
+				<div class="col-sm-8 col-xs-12 vertical-center cta-content">
+					<span>Now Hiring!</span> We're actively looking for talent.
+				</div>
+				<div class="col-sm-2 col-xs-12 vertical-center" style="text-align: right;">
+					<a href="#" class="btn btn-default">Learn More</a>
+				</div>
+			</div>
+		</div>
 		<svg class="section-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
 			<path class="white-path" d="M0 50 L100 100 L0 100 Z"></path>
 		</svg>

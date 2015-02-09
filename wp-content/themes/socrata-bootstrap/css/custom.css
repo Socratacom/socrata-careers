@@ -315,10 +315,42 @@ svg.section-break {
 /*******************************/
 /* Call To Action */
 /*******************************/
-.call-to-action {
+.cta-jobs {
   background:#3498db;
   position: relative;
-  padding:50px 30px 100px 30px;
+  padding:50px 0 30px 0;
+}
+/*.cta-jobs .row, .cta-jobs .container{
+  height: 1px;
+}*/
+.cta-wrapper {
+  max-width:700px;
+  margin:0 auto;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cta-content {
+  color:#fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+.cta-content span {
+  font-size: 24px;
+}
+.stuart-1 {
+  display:block;
+  height:121px;
+  width:96px;
+  background-image: url(../images/stuart-1.png);
+  background-repeat: no-repeat;
+  margin-top:-40px;
 }
 
 /*******************************/
