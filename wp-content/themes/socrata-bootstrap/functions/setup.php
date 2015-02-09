@@ -35,8 +35,8 @@ add_action( 'init', 'register_my_menus' );
 function register_my_menus() {
   register_nav_menus(
     array(
-        'persona' => __( 'Persona Menu' ),
-        'industry' => __( 'Industry Menu' )
+        'social' => __( 'Social Menu' ),
+        'sitemap' => __( 'Sitemap Menu' )
     )
   );
 }

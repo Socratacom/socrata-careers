@@ -1,7 +1,7 @@
 <?php
 
 // metaboxes directory constant
-define( 'CUSTOM_METABOXES_DIR', plugins_url() . '/socrata-stories/metaboxes' ); //Change this URL path. Also change the function prefix.
+define( 'CUSTOM_METABOXES_DIR', plugins_url() . '/socrata-team/metaboxes' ); //Change this URL path. Also change the function prefix.
 
 /**
  * recives data about a form field and spits out the proper html
@@ -12,7 +12,7 @@ define( 'CUSTOM_METABOXES_DIR', plugins_url() . '/socrata-stories/metaboxes' ); 
  *
  * @return	string									html for the field
  */
-function socrata_stories_custom_meta_box_field( $field, $meta = null, $repeatable = null ) {
+function socrata_team_custom_meta_box_field( $field, $meta = null, $repeatable = null ) {
 	if ( ! ( $field || is_array( $field ) ) )
 		return;
 	
@@ -251,7 +251,7 @@ function socrata_stories_custom_meta_box_field( $field, $meta = null, $repeatabl
 					if ( ! array_key_exists( $repeatable_field['id'], $meta[$i] ) )
 						$meta[$i][$repeatable_field['id']] = null;
 					echo '<label>' . $repeatable_field['label']  . '</label><p>';
-					echo socrata_stories_custom_meta_box_field( $repeatable_field, $meta[$i][$repeatable_field['id']], array( $id, $i ) );
+					echo socrata_team_custom_meta_box_field( $repeatable_field, $meta[$i][$repeatable_field['id']], array( $id, $i ) );
 					echo '</p>';
 				} // end each field
 				echo '</td><td><a class="meta_box_repeatable_remove" href="#"></a></td></tr>';
@@ -282,10 +282,10 @@ function socrata_stories_custom_meta_box_field( $field, $meta = null, $repeatabl
  *
  * @return	bool				whether or not the type is in the provided array
  */
-function socrata_stories_meta_box_find_field_type( $needle, $haystack ) {
+function socrata_team_meta_box_find_field_type( $needle, $haystack ) {
 	foreach ( $haystack as $h )
 		if ( isset( $h['type'] ) && $h['type'] == 'repeatable' )
-			return socrata_stories_meta_box_find_field_type( $needle, $h['repeatable_fields'] );
+			return socrata_team_meta_box_find_field_type( $needle, $h['repeatable_fields'] );
 		elseif ( ( isset( $h['type'] ) && $h['type'] == $needle ) || ( isset( $h['repeatable_type'] ) && $h['repeatable_type'] == $needle ) )
 			return true;
 	return false;
@@ -305,7 +305,7 @@ function socrata_stories_meta_box_find_field_type( $needle, $haystack ) {
  *
  * @return	bool				whether or not the type is in the provided array
  */
-function socrata_stories_meta_box_find_repeatable( $needle = 'repeatable', $haystack ) {
+function socrata_team_meta_box_find_repeatable( $needle = 'repeatable', $haystack ) {
 	foreach ( $haystack as $h )
 		if ( isset( $h['type'] ) && $h['type'] == $needle )
 			return true;
@@ -315,7 +315,7 @@ function socrata_stories_meta_box_find_repeatable( $needle = 'repeatable', $hays
 /**
  * sanitize boolean inputs
  */
-function socrata_stories_meta_box_santitize_boolean( $string ) {
+function socrata_team_meta_box_santitize_boolean( $string ) {
 	if ( ! isset( $string ) || $string != 1 || $string != true )
 		return false;
 	else
@@ -330,7 +330,7 @@ function socrata_stories_meta_box_santitize_boolean( $string ) {
  *
  * @return						a validated string
  */
-function socrata_stories_meta_box_sanitize( $string, $function = 'sanitize_text_field' ) {
+function socrata_team_meta_box_sanitize( $string, $function = 'sanitize_text_field' ) {
 	switch ( $function ) {
 		case 'intval':
 			return intval( $string );
@@ -363,7 +363,7 @@ function socrata_stories_meta_box_sanitize( $string, $function = 'sanitize_text_
  *
  * @return	array				new array, fully mapped with the provided arrays
  */
-function socrata_stories_meta_box_array_map_r( $func, $meta, $sanitizer ) {
+function socrata_team_meta_box_array_map_r( $func, $meta, $sanitizer ) {
 		
 	$newMeta = array();
 	$meta = array_values( $meta );
@@ -394,7 +394,7 @@ function socrata_stories_meta_box_array_map_r( $func, $meta, $sanitizer ) {
 		 */
 		foreach( $array as $arrayKey => $arrayValue )
 			if ( is_array( $arrayValue ) )
-				$array[$arrayKey] = socrata_stories_meta_box_array_map_r( $func, $arrayValue, $newSanitizer[$arrayKey] );
+				$array[$arrayKey] = socrata_team_meta_box_array_map_r( $func, $arrayValue, $newSanitizer[$arrayKey] );
 		
 		$array = array_map( $func, $array, $newSanitizer );
 		$newMeta[$key] = array_combine( $keys, array_values( $array ) );
@@ -410,7 +410,7 @@ function socrata_stories_meta_box_array_map_r( $func, $meta, $sanitizer ) {
  * @param	array			$fields		array of each field the box should include
  * @param	string|array	$page		post type to add meta box to
  */
-class socrata_stories_custom_add_meta_box {
+class socrata_team_custom_add_meta_box {
 	
 	var $id;
 	var $title;
@@ -440,38 +440,38 @@ class socrata_stories_custom_add_meta_box {
 		if ( in_array( $pagenow, array( 'post-new.php', 'post.php' ) ) && in_array( get_post_type(), $this->page ) ) {
 			// js
 			$deps = array( 'jquery' );
-			if ( socrata_stories_meta_box_find_field_type( 'date', $this->fields ) )
+			if ( socrata_team_meta_box_find_field_type( 'date', $this->fields ) )
 				$deps[] = 'jquery-ui-datepicker';
-			if ( socrata_stories_meta_box_find_field_type( 'slider', $this->fields ) )
+			if ( socrata_team_meta_box_find_field_type( 'slider', $this->fields ) )
 				$deps[] = 'jquery-ui-slider';
-			if ( socrata_stories_meta_box_find_field_type( 'color', $this->fields ) )
+			if ( socrata_team_meta_box_find_field_type( 'color', $this->fields ) )
 				$deps[] = 'farbtastic';
 			if ( in_array( true, array(
-				socrata_stories_meta_box_find_field_type( 'chosen', $this->fields ),
-				socrata_stories_meta_box_find_field_type( 'post_chosen', $this->fields )
+				socrata_team_meta_box_find_field_type( 'chosen', $this->fields ),
+				socrata_team_meta_box_find_field_type( 'post_chosen', $this->fields )
 			) ) ) {
 				wp_register_script( 'chosen', CUSTOM_METABOXES_DIR . '/js/chosen.js', array( 'jquery' ) );
 				$deps[] = 'chosen';
 				wp_enqueue_style( 'chosen', CUSTOM_METABOXES_DIR . '/css/chosen.css' );
 			}
 			if ( in_array( true, array( 
-				socrata_stories_meta_box_find_field_type( 'date', $this->fields ), 
-				socrata_stories_meta_box_find_field_type( 'slider', $this->fields ),
-				socrata_stories_meta_box_find_field_type( 'color', $this->fields ),
-				socrata_stories_meta_box_find_field_type( 'chosen', $this->fields ),
-				socrata_stories_meta_box_find_field_type( 'post_chosen', $this->fields ),
-				socrata_stories_meta_box_find_repeatable( 'repeatable', $this->fields ),
-				socrata_stories_meta_box_find_field_type( 'image', $this->fields ),
-				socrata_stories_meta_box_find_field_type( 'file', $this->fields )
+				socrata_team_meta_box_find_field_type( 'date', $this->fields ), 
+				socrata_team_meta_box_find_field_type( 'slider', $this->fields ),
+				socrata_team_meta_box_find_field_type( 'color', $this->fields ),
+				socrata_team_meta_box_find_field_type( 'chosen', $this->fields ),
+				socrata_team_meta_box_find_field_type( 'post_chosen', $this->fields ),
+				socrata_team_meta_box_find_repeatable( 'repeatable', $this->fields ),
+				socrata_team_meta_box_find_field_type( 'image', $this->fields ),
+				socrata_team_meta_box_find_field_type( 'file', $this->fields )
 			) ) )
 				wp_enqueue_script( 'meta_box', CUSTOM_METABOXES_DIR . '/js/scripts.js', $deps );
 			
 			// css
 			$deps = array();
 			wp_register_style( 'jqueryui', CUSTOM_METABOXES_DIR . '/css/jqueryui.css' );
-			if ( socrata_stories_meta_box_find_field_type( 'date', $this->fields ) || socrata_stories_meta_box_find_field_type( 'slider', $this->fields ) )
+			if ( socrata_team_meta_box_find_field_type( 'date', $this->fields ) || socrata_team_meta_box_find_field_type( 'slider', $this->fields ) )
 				$deps[] = 'jqueryui';
-			if ( socrata_stories_meta_box_find_field_type( 'color', $this->fields ) )
+			if ( socrata_team_meta_box_find_field_type( 'color', $this->fields ) )
 				$deps[] = 'farbtastic';
 			wp_enqueue_style( 'meta_box', CUSTOM_METABOXES_DIR . '/css/meta_box.css', $deps );
 		}
@@ -481,7 +481,7 @@ class socrata_stories_custom_add_meta_box {
 	 * adds scripts to the head for special fields with extra js requirements
 	 */
 	function admin_head() {
-		if ( in_array( get_post_type(), $this->page ) && ( socrata_stories_meta_box_find_field_type( 'date', $this->fields ) || socrata_stories_meta_box_find_field_type( 'slider', $this->fields ) ) ) {
+		if ( in_array( get_post_type(), $this->page ) && ( socrata_team_meta_box_find_field_type( 'date', $this->fields ) || socrata_team_meta_box_find_field_type( 'slider', $this->fields ) ) ) {
 		
 			echo '<script type="text/javascript">
 						jQuery(function( $) {';
@@ -551,7 +551,7 @@ class socrata_stories_custom_add_meta_box {
 						<td>';
 						
 						$meta = get_post_meta( get_the_ID(), $field['id'], true);
-						echo socrata_stories_custom_meta_box_field( $field, $meta );
+						echo socrata_team_custom_meta_box_field( $field, $meta );
 						
 				echo     '<td>
 					</tr>';
@@ -602,9 +602,9 @@ class socrata_stories_custom_add_meta_box {
 				} elseif ( isset( $new ) && $new != $old ) {
 					$sanitizer = isset( $field['sanitizer'] ) ? $field['sanitizer'] : 'sanitize_text_field';
 					if ( is_array( $new ) )
-						$new = socrata_stories_meta_box_array_map_r( 'socrata_stories_meta_box_sanitize', $new, $sanitizer );
+						$new = socrata_team_meta_box_array_map_r( 'socrata_team_meta_box_sanitize', $new, $sanitizer );
 					else
-						$new = socrata_stories_meta_box_sanitize( $new, $sanitizer );
+						$new = socrata_team_meta_box_sanitize( $new, $sanitizer );
 					update_post_meta( $post_id, $field['id'], $new );
 				}
 			}

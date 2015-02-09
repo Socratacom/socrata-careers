@@ -15,4 +15,5 @@
     </div>
   </div>
 </div>
+<?php get_template_part( 'call-to-action' ); ?>
 <?php get_footer(); ?>
