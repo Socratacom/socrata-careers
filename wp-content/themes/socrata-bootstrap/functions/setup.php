@@ -36,7 +36,9 @@ function register_my_menus() {
   register_nav_menus(
     array(
         'social' => __( 'Social Menu' ),
-        'sitemap' => __( 'Sitemap Menu' )
+        'sitemap' => __( 'Sitemap Menu' ),
+        'header' => __( 'Header Menu' ),
+        'mobile' => __( 'Mobile Menu' )
     )
   );
 }

@@ -32,8 +32,19 @@ function script_enqueues()
 
   wp_register_script('gnmenu-js', get_template_directory_uri() . '/js/gnmenu.js', false, null, true);
   wp_enqueue_script('gnmenu-js');
-
 }
 add_action('wp_enqueue_scripts', 'script_enqueues', 100);
 
-?>
+// Targeted Scripts
+function homepage_scripts() {
+  if (is_page_template('homepage.php')) {
+    wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
+    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
+    wp_register_script('homeVideo', get_template_directory_uri() . '/js/home-page-video.js', false, null, true);
+    wp_enqueue_script('wistiaExternal');
+    wp_enqueue_script('wistiaCropFill');
+    wp_enqueue_script('homeVideo');
+  }
+}
+add_action('wp_enqueue_scripts', 'homepage_scripts');
+

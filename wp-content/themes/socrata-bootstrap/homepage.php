@@ -4,16 +4,19 @@ Template Name: Homepage
 */
 get_header(); ?>
 <div id="page">
-	<section class="video-background">
-		<svg class="section-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path class="white-path" d="M0 10 L50 100 L0 100 Z"></path>
-			<path class="blue-path" d="M51 100 L100 100 L100 10 Z"></path>
-			<path class="white-path" d="M50 100 L100 100 L100 50 Z"></path>
-		</svg>
-	</section>
+  <section id="video_container" >
+    <div id="playbutton">
+      <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+    </div>
+    <div id="cover_all"></div>
+    <div id="main-image"></div>
+    <div id="wistia_z1ggfo8f86" class="wistia_embed backgroundVideo" ></div>    
+  </section>
 	<section class="text-block">
 		<h1>Core value statement. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
 	</section>	
 </div>
+<div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
+<div id="wistia_fji9juvptr" class="wistia_embed overlayVideo" ></div>
 <?php get_template_part( 'call-to-action' ); ?>
 <?php get_footer(); ?>

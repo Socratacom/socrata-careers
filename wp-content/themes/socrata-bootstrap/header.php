@@ -16,34 +16,20 @@
 <![endif]-->
 <header>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-         
+    <div class="container">         
       <a class="white-logo header-logo" href="<?php echo home_url('/'); ?>"></a>
-      <a class="corporate-link" href="http://socrata.com"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Socrata.com</a>
+      <a class="corporate-link hidden-xs" href="http://socrata.com"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Socrata.com</a>
       <!-- Main Menu -->
-      <ul id="main-menu" class="hidden-xs">
-        <li><a href="/why-socrata">Why Socrata?</a></li>
-        <li><a href="#">Team &amp; Culture</a></li>
-        <li><a href="#">Engineers</a></li>
-        <li><a href="#">Jobs</a></li>
-      </ul>
+      <?php wp_nav_menu( array( 'theme_location' => 'header', 'container_class' => 'hidden-xs' )); ?>
       <!-- Mobile Menu -->
       <ul id="gn-menu" class="gn-menu-main hidden-sm hidden-md hidden-lg">
         <li class="gn-trigger">
           <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
           <nav class="gn-menu-wrapper">
-            <div class="gn-scroller">
-              <ul class="gn-menu">         
-                <li><a href="#">Why Socrata?</a></li>
-                <li><a href="#">Team &amp; Culture</a></li>
-                <li><a href="#">Engineers</a></li>
-                <li><a href="#">Jobs</a></li>                   
-              </ul>
-            </div><!-- /gn-scroller -->
+            <?php wp_nav_menu( array( 'theme_location' => 'mobile', 'container_class' => 'gn-scroller', 'menu_class' => 'gn-menu' )); ?>
           </nav>
         </li>
-      </ul> 
-
+      </ul>
     </div>
   </nav>
 </header>
