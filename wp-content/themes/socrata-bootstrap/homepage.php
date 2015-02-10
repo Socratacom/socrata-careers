@@ -5,8 +5,11 @@ Template Name: Homepage
 get_header(); ?>
 <div id="page">
   <section id="video_container" >
-    <div id="playbutton">
-      <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+    <div id="text">
+      <div id="playbutton">
+        <h1>Our Employees, Improving Our World</h1>
+        <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+      </div>
     </div>
     <div id="cover_all"></div>
     <div id="main-image"></div>
