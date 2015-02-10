@@ -10,7 +10,12 @@ get_header(); ?>
     </div>
     <div id="cover_all"></div>
     <div id="main-image"></div>
-    <div id="wistia_z1ggfo8f86" class="wistia_embed backgroundVideo" ></div>    
+    <div id="wistia_z1ggfo8f86" class="wistia_embed backgroundVideo" ></div>
+    <svg class="video-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="150" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="white-path" d="M0 10 L50 100 L0 100 Z"></path>
+      <path class="blue-path" d="M51 100 L100 100 L100 10 Z"></path>
+      <path class="white-path" d="M50 100 L100 100 L100 50 Z"></path>
+    </svg>
   </section>
 	<section class="text-block">
 		<h1>Core value statement. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>

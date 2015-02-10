@@ -39,11 +39,13 @@ add_action('wp_enqueue_scripts', 'script_enqueues', 100);
 function homepage_scripts() {
   if (is_page_template('homepage.php')) {
     wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
-    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
-    wp_register_script('homeVideo', get_template_directory_uri() . '/js/home-page-video.js', false, null, true);
     wp_enqueue_script('wistiaExternal');
+    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
     wp_enqueue_script('wistiaCropFill');
+    wp_register_script('homeVideo', get_template_directory_uri() . '/js/home-page-video.js', false, null, true);    
     wp_enqueue_script('homeVideo');
+    wp_register_style('homepage-css', get_template_directory_uri() . '/css/homepage.css', false, null);
+    wp_enqueue_style('homepage-css');
   }
 }
 add_action('wp_enqueue_scripts', 'homepage_scripts');
