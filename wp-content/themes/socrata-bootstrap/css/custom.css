@@ -274,6 +274,20 @@ ul#menu-header {
 	}
 }
 
+/*******************************/
+/* Page Blocks */
+/*******************************/
+
+.text-block {
+  text-align: center;
+  padding:80px 30px;
+}
+.text-block h1 {
+  font-weight: 300;
+  max-width: 600px;
+  margin:0 auto;
+}
+
 
 /*******************************/
 /* Call To Action */

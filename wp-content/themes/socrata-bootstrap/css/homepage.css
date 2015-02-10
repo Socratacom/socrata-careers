@@ -34,6 +34,7 @@
   color:#fff;
   cursor: pointer;
   opacity: 0.8;
+  text-shadow: 0px 0px 5px #999;
 }
 .home #playbutton span:hover {
   opacity: 1;
@@ -82,6 +83,7 @@
 }
 .home #ex span {
   font-size: 32px;
+  text-shadow: 0px 0px 5px #999;
 }
 .home #ex:hover {
   opacity: 1;
@@ -95,14 +97,4 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-}
-
-.home .text-block {
-  text-align: center;
-  padding:80px 30px;
-}
-.home .text-block h1 {
-  font-weight: 300;
-  max-width: 600px;
-  margin:0 auto;
 }
