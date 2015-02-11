@@ -40,9 +40,16 @@ h5 {
 #page {
 	padding:60px 0;
 }
+#page p, #page li {
+  font-weight: 300;
+  font-size: 16px;
+}
 
 p {
 	margin-bottom:1.63em;
+}
+p, li {
+  font-weight: 400;
 }
 a {
   color:#3498DB;
@@ -287,6 +294,51 @@ ul#menu-header {
   max-width: 600px;
   margin:0 auto;
 }
+
+
+.wet-asphalt {
+  background:#34495E;
+  color:#fff;
+}
+.wet-asphalt svg.slant-right {
+  margin-bottom:-5px;
+  margin-top:30px;
+  padding-top:130px;
+  background:#34495E;
+}
+.wet-asphalt path.slant-left {
+  fill:#34495E;
+  stroke:#34495E;
+}
+.carrot {
+  background:#E67E22;
+  color:#fff;
+}
+.carrot svg.slant-right {
+  margin-bottom:-5px;
+  margin-top:30px;
+  line-height: normal;
+  background:#E67E22;
+}
+.carrot path.slant-left {
+  fill:#E67E22;
+  stroke:#E67E22;
+}
+.concrete {
+  background:#95A5A6;
+  color:#fff;
+}
+.concrete svg.slant-right {
+  margin-bottom:-5px;
+  margin-top:30px;
+  line-height: normal;
+  background:#95A5A6;
+}
+.concrete path.slant-left {
+  fill:#95A5A6;
+  stroke:#95A5A6;
+}
+
 
 
 
@@ -885,10 +937,3 @@ fieldset[disabled] .btn-link:focus {
 @media only screen and (max-width : 320px) {
     
 }
-
-
-
-
-
-
-

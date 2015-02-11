@@ -1,16 +1,23 @@
 <?php
 
-add_shortcode("slantright", "separator_right");
-function separator_right($atts) {
+ // [slantRight background="#ccc" shape="#fff"]
+add_shortcode("slantRight", "slant_right");
+function slant_right($atts) {
   extract(shortcode_atts(array(
-    "fill" => '',
-    "stroke" => '',
+    "color" => '',
   ), $atts));
-  return '
+  return '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="slant-right">
+	<path d="M0 0 L100 100 L0 100 Z" style="fill:'.$color.'; stroke:'.$color.';"></path>
+	</svg>';
+}
 
-
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" style="background:#000;">
-	<path d="M0 0 L100 100 L0 100 Z" style="fill:'.$fill.'; stroke:'.$stroke.';"></path>
-	</svg>'
-  ;
+ // [slantLeft background="#ccc" shape="#fff"]
+add_shortcode("slantLeft", "slant_left");
+function slant_left($atts) {
+  extract(shortcode_atts(array(
+    "color" => '',
+  ), $atts));
+  return '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" style="background:'.$color.'; line-height: normal; margin-bottom:-5px;">
+	<path d="M0 0 L100 0 L0 100 Z" class="slant-left"></path>
+	</svg>';
 }

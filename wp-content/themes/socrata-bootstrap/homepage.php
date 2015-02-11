@@ -4,7 +4,7 @@ Template Name: Homepage
 */
 get_header(); ?>
 <div id="page">
-  <section id="video_container" >
+  <section id="video_container">
     <div id="text">
       <div id="playbutton">
         <h1>Our Employees, Improving Our World</h1>
@@ -21,7 +21,7 @@ get_header(); ?>
     </svg>
   </section>
 	<section class="text-block">
-		<h1>Core value statement. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
+		<h1>Socrata is a donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
 	</section>	
 </div>
 <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
