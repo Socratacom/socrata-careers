@@ -267,6 +267,9 @@ ul#menu-header {
 .section-wrapper {
   padding:80px 0;
 }
+.section-wrapper h1 {
+  margin:0 0 1.63em 0;
+}
 .bold-title {
   font-weight: 600;
 }
@@ -280,6 +283,7 @@ ul#menu-header {
   margin:0 auto;
 }
 
+/* Individual Sections */
 .core-values h4 {
   font-weight: 300;
   margin-bottom:30px;
@@ -291,7 +295,7 @@ ul#menu-header {
 
 }
 
-
+/* Colors */
 .wet-asphalt {
   background:#34495E;
   color:#fff;
@@ -351,6 +355,20 @@ ul#menu-header {
 .clouds hr {
   color:#BDC3C7;
   background: #BDC3C7; /* Old browsers */
+}
+.green-sea {
+  background:#16A085;
+  color:#fff;
+}
+.green-sea svg.slant-right {
+  margin-bottom:-5px;
+  margin-top:30px;
+  line-height: normal;
+  background:#16A085;
+}
+.green-sea path.slant-left {
+  fill:#16A085;
+  stroke:#16A085;
 }
 
 
