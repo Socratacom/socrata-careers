@@ -50,3 +50,13 @@ function homepage_scripts() {
 }
 add_action('wp_enqueue_scripts', 'homepage_scripts');
 
+function why_socrata_scripts() {
+  if (is_page('why-socrata')) {
+    wp_register_script('timeline-js', get_template_directory_uri() . '/js/timeline.js', false, null, true);  
+    wp_enqueue_script('timeline-js');
+    wp_register_style('timeline-css', get_template_directory_uri() . '/css/timeline.css', false, null);
+    wp_enqueue_style('timeline-css');
+  }
+}
+add_action('wp_enqueue_scripts', 'why_socrata_scripts');
+

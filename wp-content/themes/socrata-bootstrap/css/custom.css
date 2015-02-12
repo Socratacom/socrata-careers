@@ -264,9 +264,8 @@ ul#menu-header {
 /* Page Blocks */
 /*******************************/
 
-.section-title {
+.section-wrapper {
   padding:80px 0;
-  margin: 0;
 }
 .bold-title {
   font-weight: 600;
@@ -279,6 +278,17 @@ ul#menu-header {
   font-weight: 300;
   max-width: 600px;
   margin:0 auto;
+}
+
+.core-values h4 {
+  font-weight: 300;
+  margin-bottom:30px;
+}
+
+.perks h3 {
+  border-bottom:#d1d1d1 solid 1px;
+  padding-bottom:15px;
+
 }
 
 
