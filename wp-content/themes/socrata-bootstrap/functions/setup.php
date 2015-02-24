@@ -9,14 +9,15 @@ function site_setup() {
 }
 add_action('init', 'site_setup');
 
-add_image_size( 'square-sm', 100, 100, true );
-add_image_size( 'square-md', 200, 200, true );
-add_image_size( 'square-lg', 500, 500, true );
-add_image_size( 'screen-lg', 600, 382, true );
-add_image_size( 'screen-md', 470, 299, true );
-add_image_size( 'screen-sm', 262, 167, true );
-if (! isset($content_width))
-	$content_width = 600;
+// Adding New On-the-fly Image resizing
+function tuts_custom_img( $thumb_size, $image_width, $image_height ) { 
+  global $post; 
+  $params = array( 'width' => $image_width, 'height' => $image_height );   
+  $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID, '' ), $thumb_size );
+  $custom_img_src = bfi_thumb( $imgsrc[0], $params );   
+  return $custom_img_src;   
+}
+
 
 function site_search_form( $form ) {
     $form = '<form class="form-inline" role="search" method="get" id="searchform" action="' . home_url('/') . '" >
@@ -42,3 +43,13 @@ function register_my_menus() {
     )
   );
 }
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+global $post;
+  if ( isset( $post ) ) {
+    $classes[] = $post->post_name;
+  }
+  return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );

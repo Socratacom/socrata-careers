@@ -34,7 +34,7 @@ function create_headlines() {
       ),
       'public' => true,
       'menu_position' => 5,
-      'supports' => array( 'title', 'revisions' ),
+      'supports' => array( 'title', 'thumbnail', 'revisions' ),
       'taxonomies' => array( '' ),
       'menu_icon' => '',
       'has_archive' => true,

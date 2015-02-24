@@ -19,6 +19,7 @@ function socrata_timeline() {
       <div class="socrata-timeline-content">
         <h4>CEO Kevin Merritt Founds Socrata</h4>
         <p>This cloud platform enables public sector organizations to easily manage and share their data.</p>
+        <p><img src="http://placehold.it/100x100"></p>
       </div> <!-- socrata-timeline-content -->
     </div> <!-- socrata-timeline-block -->
 

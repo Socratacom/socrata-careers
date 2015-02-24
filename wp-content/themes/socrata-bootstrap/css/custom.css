@@ -269,6 +269,7 @@ ul#menu-header {
 }
 .section-wrapper h1 {
   margin:0 0 1.63em 0;
+  font-weight: 300;
 }
 .bold-title {
   font-weight: 600;
@@ -371,6 +372,50 @@ ul#menu-header {
   stroke:#16A085;
 }
 
+/*******************************/
+/* Team and Culture */
+/*******************************/
+
+#team-container .grid-sizer,
+#team-container .item {
+  width: 20%;
+  background:#ECF0F1;
+  border:#fff solid 5px;
+  box-sizing: border-box;
+}
+#team-container .item.w2 {
+  width: 40%;
+}
+.team-content-wrapper, .headline-content-wrapper, .blog-content-wrapper {
+  padding:15px;
+}
+.team-content-wrapper h4 {
+  margin: 0;
+}
+.team-content-wrapper p {
+  font-style: italic;
+}
+.team-content-wrapper .title {
+  font-style: normal;
+  font-weight: 400 !important;
+}
+
+.image-wrapper {
+  position: relative;
+}
+.image-wrapper a {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  background-image: url(../images/link-1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.team-and-culture .section-wrapper h1, .team-and-culture .section-wrapper h2 {
+  margin:0;
+}
 
 
 
