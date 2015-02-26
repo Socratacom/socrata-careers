@@ -20,7 +20,8 @@ function team_culture_shortcode( $atts ) {
 	);
 	$query = new WP_Query( $options );
 	if ( $query->have_posts() ) { ?>
-	<div id="team-container" class="js-packery" data-packery-options='{ "itemSelector": ".item", "columnWidth": ".grid-sizer"}'>
+	<!--<div id="team-container" class="js-packery" data-packery-options='{ "itemSelector": ".item", "columnWidth": ".grid-sizer"}'>-->
+	<div id="team-container">
 		<div class="grid-sizer"></div>
 
 	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -66,6 +67,7 @@ function team_culture_shortcode( $atts ) {
 
 	<?php endwhile; wp_reset_postdata(); ?>
 	</div>
+
 
 	<?php $content = ob_get_clean();
 	return $content;

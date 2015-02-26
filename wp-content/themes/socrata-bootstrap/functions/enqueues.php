@@ -53,8 +53,11 @@ add_action('wp_enqueue_scripts', 'why_socrata_scripts');
 
 function team_and_culture_scripts() {
   if (is_page('team-and-culture')) {
+    wp_enqueue_script('masonry');
     wp_register_script('packery-js', get_template_directory_uri() . '/js/packery.pkgd.min.js', false, null, true);  
     wp_enqueue_script('packery-js');
+    wp_register_script('packery-initialize', get_template_directory_uri() . '/js/pakery-initialize.js', false, null, true);  
+    wp_enqueue_script('packery-initialize');
   }
 }
 add_action('wp_enqueue_scripts', 'team_and_culture_scripts');
