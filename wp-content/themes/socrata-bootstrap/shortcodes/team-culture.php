@@ -20,19 +20,20 @@ function team_culture_shortcode( $atts ) {
 	);
 	$query = new WP_Query( $options );
 	if ( $query->have_posts() ) { ?>
-	<!--<div id="team-container" class="js-packery" data-packery-options='{ "itemSelector": ".item", "columnWidth": ".grid-sizer"}'>-->
 	<div id="team-container">
-		<div class="grid-sizer"></div>
-
+	<div class="grid-sizer"></div>
 	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 	<?php 
 		if (get_post_type() == 'socrata-headlines') { ?>
 			<div class="item w2">
-				<div class="image-wrapper">
+				<figure class="effect-chico">
 					<img src="<?php echo tuts_custom_img('full', 456, 300);?>"  class="img-responsive" />
-					<a href="#"></a>
-				</div>
+					<figcaption>
+						<a href="http://cnn.com"></a>
+						<div class="link-icon"><i class="fa fa-chain"></i></div>
+					</figcaption>			
+				</figure>				
 				<div class="headline-content-wrapper">
 					<h4><?php the_title()?></h4>
 					<?php $meta = get_socrata_headlines_meta(); if ($meta[0]) echo "<p>$meta[0]</p>"; ?>
@@ -45,18 +46,21 @@ function team_culture_shortcode( $atts ) {
 				<img src="<?php echo tuts_custom_img('full', 456);?>"  class="img-responsive" />
 				<div class="team-content-wrapper">
 					<h4><?php the_title()?></h4>
-					<?php $meta = get_socrata_team_meta(); if ($meta[0]) echo "<p class='title'>$meta[0]</p>"; ?>
+					<?php $meta = get_socrata_team_meta(); if ($meta[0]) echo "<p class='job-title'>$meta[0]</p>"; ?>
 					<?php $meta = get_socrata_team_meta(); if ($meta[1]) echo "<p>$meta[1]</p>"; ?>
 				</div>
 			</div>
 		<?php
 		}
 		else { ?>
-			<div class="item w2">
-				<div class="image-wrapper">
+			<div class="item w3">
+				<figure class="effect-chico">
 					<img src="<?php echo tuts_custom_img('full', 456, 300);?>"  class="img-responsive" />
-					<a href="#"></a>
-				</div>
+					<figcaption>
+						<a href="http://cnn.com"></a>
+						<div class="link-icon"><i class="fa fa-chain"></i></div>
+					</figcaption>			
+				</figure>	
 				<div class="blog-content-wrapper">
 					<h4><?php the_title()?></h4>
 				</div>

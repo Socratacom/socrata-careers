@@ -4,6 +4,7 @@ var pckry;
 imagesLoaded( container, function() {
   pckry = new Packery( container, {
     // options...
-    itemSelector: '.item'
+    itemSelector: '.item',
+    columnWidth: '.grid-sizer'
   });
 });

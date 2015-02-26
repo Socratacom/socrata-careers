@@ -36,7 +36,6 @@ a, a:hover {
   text-decoration: none;
 }
 
-
 /*******************************/
 /* Header */
 /*******************************/
@@ -376,6 +375,9 @@ ul#menu-header {
 /* Team and Culture */
 /*******************************/
 
+#team-container {
+  margin-top:50px;
+}
 #team-container .grid-sizer,
 #team-container .item {
   width: 20%;
@@ -383,7 +385,7 @@ ul#menu-header {
   border:#fff solid 5px;
   box-sizing: border-box;
 }
-#team-container .item.w2 {
+#team-container .item.w2, #team-container .item.w3 {
   width: 40%;
 }
 .team-content-wrapper, .headline-content-wrapper, .blog-content-wrapper {
@@ -395,32 +397,94 @@ ul#menu-header {
 .team-content-wrapper p {
   font-style: italic;
 }
-.team-content-wrapper .title {
+.team-content-wrapper .job-title {
   font-style: normal;
   font-weight: 400 !important;
-}
-
-.image-wrapper {
-  position: relative;
-}
-.image-wrapper a {
-  position: absolute;
-  top:0;
-  left:0;
-  height: 100%;
-  width:100%;
-  background-image: url(../images/link-1.png);
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 .team-and-culture .section-wrapper h1, .team-and-culture .section-wrapper h2 {
   margin:0;
 }
-
-
-
-
-
+figure {
+  position: relative;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 456px;
+  max-height: 300px;
+  background: #222;
+  text-align: center;
+  cursor: pointer;
+}
+figure figcaption, figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+figure.effect-chico img {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+}
+figure.effect-chico:hover img {
+  opacity: 0.5;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+figure.effect-chico figcaption {
+  padding: 3em;
+}
+figure.effect-chico figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid #fff;
+  content: '';
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+figure.effect-chico figcaption::before,
+figure.effect-chico p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-chico h2 {
+  padding: 20% 0 20px 0;
+}
+figure.effect-chico p {
+  margin: 0 auto;
+  max-width: 200px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+figure.effect-chico:hover figcaption::before,
+figure.effect-chico:hover i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+figure.effect-chico .link-icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+figure.effect-chico i {
+  background:#222;
+  color:#fff;
+  padding:20px;
+  border-radius: 50%;
+  font-size: 24px;
+  opacity: .75;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 /*******************************/
 /* Call To Action */
@@ -519,13 +583,13 @@ footer .footer-logo {
 /* Buttons */
 /*******************************/
 .tooltip.top .tooltip-inner, .tooltip.right .tooltip-inner, .tooltip.left .tooltip-inner {
-    background-color:#34495e;
+  background-color:#34495e;
 }
 .tooltip.right .tooltip-arrow {
-    border-right-color: #34495e;
+  border-right-color: #34495e;
 }
 .tooltip.top .tooltip-arrow {
-    border-top-color: #34495e;
+  border-top-color: #34495e;
 }
 .btn {
   border: none;
@@ -998,6 +1062,14 @@ fieldset[disabled] .btn-link:focus {
   .header-logo {
     left:75px;
   }
+  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3 {
+    width: 33.3%;
+  }
+  figure {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 /* Extra Small Devices, Phones */ 
@@ -1006,6 +1078,16 @@ fieldset[disabled] .btn-link:focus {
     display: block;
     text-align: center;
     padding:15px 0;
+  }
+  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3 {
+    width: 50%;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 384px) {
+  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3 {
+    width: 100%;
   }
 }
 

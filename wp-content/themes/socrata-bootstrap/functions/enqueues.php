@@ -11,6 +11,11 @@ function script_enqueues()
   wp_enqueue_style('custom-css');
   wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600', false, null);
   wp_enqueue_style('google-fonts');
+
+  wp_register_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, null);
+  wp_enqueue_style('fontawesome');
+
+
   wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr-2.6.2.min.js', false, null, true);
   wp_enqueue_script('modernizr');
   wp_register_script('html5shiv.js', get_template_directory_uri() . '/js/html5shiv.js', false, null, true);
