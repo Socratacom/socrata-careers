@@ -6,7 +6,7 @@ function socrata_timeline() {
   return '
 <div class="container"">
 <div class="section-wrapper">
-  <h1 class="text-center">A Brief History</h1>
+  <!--<h1 class="text-center">A Brief History</h1>-->
   <div class="timeline-btn-wrap">
     <div class="timeline-btn now">2007</div>
   </div>
