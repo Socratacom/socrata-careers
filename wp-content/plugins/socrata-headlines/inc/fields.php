@@ -20,8 +20,8 @@ $fields = array(
 // Get and return the values for the URL and description
 function get_socrata_headlines_meta() {
 	global $post;
-	$socrata_headlines_description = get_post_meta($post->ID, 'socrata_headlines_description', true); // 1
-	$socrata_headlines_link = get_post_meta($post->ID, 'socrata_headlines_link', true); // 2
+	$socrata_headlines_description = get_post_meta($post->ID, 'socrata_headlines_description', true); // 0
+	$socrata_headlines_link = get_post_meta($post->ID, 'socrata_headlines_link', true); // 1
 
 
   return array(

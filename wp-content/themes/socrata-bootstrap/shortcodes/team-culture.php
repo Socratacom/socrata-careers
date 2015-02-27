@@ -27,13 +27,20 @@ function team_culture_shortcode( $atts ) {
 	<?php 
 		if (get_post_type() == 'socrata-headlines') { ?>
 			<div class="item w2">
+				<?php $meta = get_socrata_headlines_meta();
+				if ($meta[1]) { ?>
 				<figure class="effect-chico">
 					<img src="<?php echo tuts_custom_img('full', 456, 300);?>"  class="img-responsive" />
 					<figcaption>
-						<a href="http://cnn.com"></a>
-						<div class="link-icon"><i class="fa fa-chain"></i></div>
+					<?php $meta = get_socrata_headlines_meta(); if ($meta[1]) echo "<a href='$meta[1]' target='_blank'></a>"; ?>
+					<div class="link-icon"><i class="fa fa-chain"></i></div>
 					</figcaption>			
-				</figure>				
+				</figure>
+				<?php }
+				else { ?>
+				<img src="<?php echo tuts_custom_img('full', 456, 300);?>"  class="img-responsive" />
+				<?php
+				} ?>
 				<div class="headline-content-wrapper">
 					<h4><?php the_title()?></h4>
 					<?php $meta = get_socrata_headlines_meta(); if ($meta[0]) echo "<p>$meta[0]</p>"; ?>
@@ -57,7 +64,7 @@ function team_culture_shortcode( $atts ) {
 				<figure class="effect-chico">
 					<img src="<?php echo tuts_custom_img('full', 456, 300);?>"  class="img-responsive" />
 					<figcaption>
-						<a href="http://cnn.com"></a>
+						<a href="<?php the_permalink(); ?>"></a>
 						<div class="link-icon"><i class="fa fa-chain"></i></div>
 					</figcaption>			
 				</figure>	

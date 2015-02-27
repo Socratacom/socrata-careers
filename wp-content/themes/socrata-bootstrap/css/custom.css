@@ -402,6 +402,9 @@ ul#menu-header {
 #team-container .item.w2, #team-container .item.w3 {
   width: 40%;
 }
+#team-container .item.w2:nth-child(2n) {
+  width:20%;
+}
 .team-content-wrapper, .headline-content-wrapper, .blog-content-wrapper {
   padding:15px;
 }
@@ -421,9 +424,9 @@ ul#menu-header {
 figure {
   position: relative;
   overflow: hidden;
-  min-width: 320px;
-  max-width: 456px;
-  max-height: 300px;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   background: #222;
   text-align: center;
   cursor: pointer;
@@ -452,10 +455,10 @@ figure.effect-chico figcaption {
 }
 figure.effect-chico figcaption::before {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
   border: 1px solid #fff;
   content: '';
   -webkit-transform: scale(1.1);
@@ -494,13 +497,14 @@ figure.effect-chico i {
   color:#fff;
   padding:20px;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 18px;
   opacity: .75;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
 
 /*******************************/
 /* Call To Action */
@@ -1100,13 +1104,8 @@ fieldset[disabled] .btn-link:focus {
   .header-logo {
     left:75px;
   }
-  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3 {
+  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
     width: 33.3%;
-  }
-  figure {
-    min-width: 100%;
-    max-width: 100%;
-    max-height: 100%;
   }
 }
 
@@ -1117,14 +1116,14 @@ fieldset[disabled] .btn-link:focus {
     text-align: center;
     padding:15px 0;
   }
-  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3 {
+  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
     width: 50%;
   }
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 384px) {
-  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3 {
+  #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
     width: 100%;
   }
 }
