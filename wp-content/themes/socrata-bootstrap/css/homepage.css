@@ -107,5 +107,21 @@
   background-image: url(../images/main.jpg);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: contain;
+  background-size: 100%;
 }
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1024px) {
+  .home #main-image {
+    background-size: cover;
+  }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 414px) {
+  .home #playbutton h1 {
+    font-size: 36px;
+    padding:0 30px;
+  }
+}
+

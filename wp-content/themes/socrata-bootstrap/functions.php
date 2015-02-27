@@ -10,6 +10,5 @@ require_once locate_template('/functions/feedback.php');
 require_once locate_template('/shortcodes/section-separators.php');
 require_once locate_template('/shortcodes/timeline.php');
 require_once locate_template('/shortcodes/team-culture.php');
-require_once locate_template('/shortcodes/loader.php');
 require_once locate_template('BFI_Thumb.php');
 ?>

@@ -1058,14 +1058,13 @@ fieldset[disabled] .btn-link:focus {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+  ul#menu-header {
+    left:150px;
+  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  .header-logo {
-    left:75px;
-  }
   #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
     width: 33.3%;
   }
@@ -1073,6 +1072,9 @@ fieldset[disabled] .btn-link:focus {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 736px) {
+  .header-logo {
+    left:75px;
+  }
   .cta-jobs li {
     display: block;
     text-align: center;
@@ -1084,7 +1086,7 @@ fieldset[disabled] .btn-link:focus {
 }
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 384px) {
+@media only screen and (max-width : 414px) {
   #team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
     width: 100%;
   }
