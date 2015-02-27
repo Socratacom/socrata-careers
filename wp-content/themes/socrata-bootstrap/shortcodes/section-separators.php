@@ -6,7 +6,7 @@ function slant_right($atts) {
   extract(shortcode_atts(array(
     "color" => '',
   ), $atts));
-  return '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="slant-right">
+  return '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="slant">
 	<path d="M0 0 L100 100 L0 100 Z" style="fill:'.$color.'; stroke:'.$color.';"></path>
 	</svg>';
 }
@@ -17,7 +17,7 @@ function slant_left($atts) {
   extract(shortcode_atts(array(
     "color" => '',
   ), $atts));
-  return '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" style="background:'.$color.'; line-height: normal; margin-bottom:-5px;">
-	<path d="M0 0 L100 0 L0 100 Z" class="slant-left"></path>
+  return '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="slant" style="background:'.$color.';">
+	<path d="M0 0 L100 0 L0 100 Z"></path>
 	</svg>';
 }

@@ -296,94 +296,52 @@ ul#menu-header {
 }
 
 /* Colors */
+svg.slant {
+  margin-bottom:-6px;
+  margin-top:0px;
+  line-height: normal;
+}
 .pomegranate {
   background:#C0392B;
   color:#fff;
-}
-.pomegranate svg.slant-right {
-  margin-bottom:-6px;
-  margin-top:30px;
-  line-height: normal;
-  background:#C0392B;
-}
-.pomegranate path.slant-left {
   fill:#C0392B;
   stroke:#C0392B;
 }
 .wet-asphalt {
   background:#34495E;
   color:#fff;
-}
-.wet-asphalt svg.slant-right {
-  margin-bottom:-6px;
-  margin-top:30px;
-  line-height: normal;
-  background:#34495E;
-}
-.wet-asphalt path.slant-left {
   fill:#34495E;
   stroke:#34495E;
 }
 .carrot {
   background:#E67E22;
   color:#fff;
-}
-.carrot svg.slant-right {
-  margin-bottom:-6px;
-  margin-top:30px;
-  line-height: normal;
-  background:#E67E22;
-}
-.carrot path.slant-left {
   fill:#E67E22;
   stroke:#E67E22;
 }
 .concrete {
   background:#95A5A6;
   color:#fff;
-}
-.concrete svg.slant-right {
-  margin-bottom:-6px;
-  margin-top:30px;
-  line-height: normal;
-  background:#95A5A6;
-}
-.concrete path.slant-left {
   fill:#95A5A6;
   stroke:#95A5A6;
 }
 .clouds {
   background:#ECF0F1;
-  color:#222;
-}
-.clouds svg.slant-right {
-  margin-bottom:-6px;
-  margin-top:30px;
-  line-height: normal;
-  background:#ECF0F1;
-}
-.clouds path.slant-left {
+  color:#2C3E50;
   fill:#ECF0F1;
   stroke:#ECF0F1;
+}
+.green-sea {
+  background:#16A085;
+  color:#fff;
+  fill:#16A085;
+  stroke:#16A085;
 }
 .clouds hr {
   color:#BDC3C7;
   background: #BDC3C7; /* Old browsers */
 }
-.green-sea {
-  background:#16A085;
-  color:#fff;
-}
-.green-sea svg.slant-right {
-  margin-bottom:-6px;
-  margin-top:30px;
-  line-height: normal;
-  background:#16A085;
-}
-.green-sea path.slant-left {
-  fill:#16A085;
-  stroke:#16A085;
-}
+
 
 /*******************************/
 /* Team and Culture */
