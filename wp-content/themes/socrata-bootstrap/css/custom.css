@@ -561,6 +561,7 @@ figure.effect-chico i {
   max-width:940px;
   margin:0 auto;  
   box-shadow: 0px 0px 10px #222;
+  background:#ccc;
 }
 
 /*******************************/
