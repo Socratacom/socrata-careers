@@ -8,7 +8,7 @@ get_header(); ?>
     <div id="text">
       <div id="playbutton">
         <h1>Our Employees, Improving Our World</h1>
-        <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-play-circle playbutton" aria-hidden="true"></span>
       </div>
     </div>
     <div id="cover_all"></div>

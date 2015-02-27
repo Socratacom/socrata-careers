@@ -62,19 +62,7 @@
   margin:0 auto 30px auto;
   text-shadow: 0px 0px 5px #999;
 }
-.home #playbutton span {
-  font-size: 80px;
-  color:#fff;
-  cursor: pointer;
-  opacity: 0.8;
-  text-shadow: 0px 0px 5px #999;
-  background:transparent;
-  display: inline-block;
-  line-height: normal !important;
-}
-.home #playbutton span:hover {
-  opacity: 1;
-}
+
 
 .home #cover_all {
   position: absolute;

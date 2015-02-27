@@ -294,6 +294,27 @@ ul#menu-header {
   padding-bottom:15px;
 
 }
+.perks h4 {
+  margin: 0;
+}
+.perks ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.perks li {
+  position: relative;
+  padding-left: 25px;
+}
+.perks li::before {
+  content: "\f05d";
+  font-family:FontAwesome;  
+  position: absolute;
+  left:0;
+  top:-2px;
+  color:#2ECC71;
+  font-size: 18px;
+}
 
 /* Colors */
 svg.slant {
@@ -337,11 +358,48 @@ svg.slant {
   fill:#16A085;
   stroke:#16A085;
 }
+.peter-river {
+  background:#3498DB;
+  color:#fff;
+  fill:#3498DB;
+  stroke:#3498DB;
+}
 .clouds hr {
   color:#BDC3C7;
   background: #BDC3C7; /* Old browsers */
 }
 
+#page section:first-of-type h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+
+}
+.peter-river h1, .pomegranate h1, .wet-asphalt h1, .carrot h1, .concrete h1, .clouds h1, .green-sea h1, .pomegranate h2, .wet-asphalt h2, .carrot h2, .concrete h2, .clouds h2, .green-sea h2, .peter-river h2 {
+    max-width: 940px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+span.playbutton {
+  font-size: 75px;
+  color:#fff;
+  cursor: pointer;
+  opacity: .75;
+  text-shadow: 0px 0px 5px #999;
+  background:transparent;
+  display: inline-block;
+  line-height: normal !important;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+}
+span.playbutton:hover {
+  opacity: 1;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
 
 /*******************************/
 /* Team and Culture */
@@ -375,9 +433,6 @@ svg.slant {
 .team-content-wrapper .job-title {
   font-style: normal;
   font-weight: 400 !important;
-}
-.team-and-culture .section-wrapper h1, .team-and-culture .section-wrapper h2 {
-  margin:0;
 }
 figure {
   position: relative;
