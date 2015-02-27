@@ -22,7 +22,7 @@ get_header(); ?>
   </section>
 	<section class="text-block">
 		<h1>Socrata is a donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
-	</section>	
+	</section>
 </div>
 <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
 <div id="wistia_u2kc7ff0qp" class="wistia_embed overlayVideo" ></div>
