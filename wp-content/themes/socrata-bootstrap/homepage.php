@@ -21,7 +21,7 @@ get_header(); ?>
     </svg>
   </section>
 	<section class="text-block">
-		<h1>Socrata is a donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus.</h1>
+		<h1>Socrata is unleashing the power of data to improve the world around us.</h1>
 	</section>
 </div>
 <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>

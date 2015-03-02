@@ -1,7 +1,7 @@
 <section class="cta-jobs">
 	<div class="container">
 		<ul>
-			<li><div class="stuart"></div></li>
+			<li><div class="cta-stuart"></div></li>
 			<li><span>Now Hiring!</span> We're actively looking for talent.</li>
 			<li><a href="/jobs" class="btn btn-inverse">Learn More</a></li>
 		</ul>

@@ -279,7 +279,7 @@ ul#menu-header {
 }
 .text-block h1 {
   font-weight: 300;
-  max-width: 600px;
+  max-width: 940px;
   margin:0 auto;
 }
 
@@ -288,10 +288,15 @@ ul#menu-header {
   font-weight: 300;
   margin-bottom:30px;
 }
+.core-values i {
+  font-weight: 600;
+  font-size:80px;
+  font-style: normal;
+}
 
-.perks h3 {
-  border-bottom:#d1d1d1 solid 1px;
-  padding-bottom:15px;
+.perks h3, .engineer-content h3 {
+  font-weight: 600;
+  letter-spacing: -1px;
 
 }
 .perks h4 {
@@ -315,6 +320,7 @@ ul#menu-header {
   color:#2ECC71;
   font-size: 18px;
 }
+
 
 /* Colors */
 svg.slant {
@@ -372,12 +378,17 @@ svg.slant {
 #page section:first-of-type h1 {
   font-size: 50px;
   margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
 
 }
 .peter-river h1, .pomegranate h1, .wet-asphalt h1, .carrot h1, .concrete h1, .clouds h1, .green-sea h1, .pomegranate h2, .wet-asphalt h2, .carrot h2, .concrete h2, .clouds h2, .green-sea h2, .peter-river h2 {
     max-width: 940px;
     margin-left:auto;
     margin-right:auto;
+}
+section.green-sea {
+  position: relative;
 }
 
 span.playbutton {
@@ -557,13 +568,13 @@ figure.effect-chico i {
   fill: #fff;
   stroke: #fff;
 }
-.stuart {
+.cta-stuart {
   display:block;
-  height:121px;
-  width:96px;
+  height:133px;
+  width:105px;
   background-image: url(../images/stuart-1.png);
   background-repeat: no-repeat;
-  margin: -70px auto 0 auto;
+  margin: -75px auto 0 auto;
 }
 
 /*******************************/
@@ -591,6 +602,24 @@ figure.effect-chico i {
 .message img {
   padding:0 30px;
 }
+
+/*******************************/
+/* Stuart */
+/*******************************/
+.stuart {
+  width:100%;
+  height:150px;
+  position: absolute;
+  bottom:-30px;
+  z-index: 100;
+}
+
+.engineer {
+  background:url(../images/stuart-engineer.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 
 /*******************************/
 /* Footer */
