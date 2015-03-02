@@ -50,7 +50,7 @@ function team_culture_shortcode( $atts ) {
 		}
 		elseif (get_post_type() == 'socrata-team') { ?>
 			<div class="item">
-				<img src="<?php echo tuts_custom_img('full', 456);?>"  class="img-responsive" />
+				<img src="<?php echo tuts_custom_img('full', 456, 456);?>"  class="img-responsive" />
 				<div class="team-content-wrapper">
 					<h4><?php the_title()?></h4>
 					<?php $meta = get_socrata_team_meta(); if ($meta[0]) echo "<p class='job-title'>$meta[0]</p>"; ?>
