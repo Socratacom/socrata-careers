@@ -20,9 +20,10 @@ get_header(); ?>
       <path class="white-path" d="M50 100 L100 100 L100 50 Z"></path>
     </svg>
   </section>
-	<section class="text-block">
-		<h1>Socrata is unleashing the power of data to improve the world around us.</h1>
-	</section>
+  <?php if(have_posts()): while(have_posts()): the_post();?>
+  <?php the_content()?>
+  <?php endwhile; ?>
+  <?php endif;?>
 </div>
 <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
 <div id="wistia_u2kc7ff0qp" class="wistia_embed overlayVideo" ></div>

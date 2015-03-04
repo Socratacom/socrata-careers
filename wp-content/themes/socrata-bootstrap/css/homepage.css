@@ -9,12 +9,12 @@
   z-index: 100;
 }
 .home .video-break .white-path {
-  fill: #fff;
-  stroke: #fff;
+  fill: #ECF0F1;
+  stroke: none;
 }
 .home .video-break .blue-path {
   fill: #3498db;
-  stroke: #3498db;
+  stroke: none;
 }
 
 .home .overlayVideo {
@@ -62,8 +62,6 @@
   margin:0 auto 30px auto;
   text-shadow: 0px 0px 5px #999;
 }
-
-
 .home #cover_all {
   position: absolute;
   top: 0;
@@ -97,6 +95,8 @@
   background-position: top;
   background-size: 100%;
 }
+
+
 /*==========  Non-Mobile First Method  ==========*/
 
 /* Large Devices, Wide Screens */
