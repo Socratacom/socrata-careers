@@ -584,6 +584,14 @@ figure.effect-chico i {
 }
 
 /*******************************/
+/* Jobvite */
+/*******************************/
+iframe.jvcontainer {
+	width:600px !important;
+	background:#ccc;
+}
+
+/*******************************/
 /* message */
 /*******************************/
 
@@ -606,17 +614,21 @@ figure.effect-chico i {
   z-index: 100;
 }
 
-.engineer {
+.stuart.engineer {
   background:url(../images/stuart-engineer.png);
   background-repeat: no-repeat;
   background-position: center center;
 }
-.team {
+.stuart.team {
   background:url(../images/stuart-team.png);
   background-repeat: no-repeat;
   background-position: center center;
 }
-
+.stuart.jobs {
+  background:url(../images/stuart-jobs.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
 /*******************************/
 /* Footer */

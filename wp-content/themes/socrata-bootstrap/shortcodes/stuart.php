@@ -15,3 +15,11 @@ function stuart_team() {
 <div class="stuart team"></div>
   ';
 }
+
+ // [stuart-jobs]
+add_shortcode("stuart-jobs", "stuart_jobs");
+function stuart_jobs() {
+  return '
+<div class="stuart jobs"></div>
+  ';
+}
