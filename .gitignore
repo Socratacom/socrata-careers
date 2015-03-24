@@ -30,5 +30,5 @@ wp-content/plugins/*
  
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
-!wp-content/themes/twentyfifteen/
 !wp-content/themes/socrata-bootstrap/
+!wp-content/themes/sage/
