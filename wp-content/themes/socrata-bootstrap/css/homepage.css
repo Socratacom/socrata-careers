@@ -9,7 +9,7 @@
   z-index: 100;
 }
 .home .video-break .white-path {
-  fill: #ECF0F1;
+  fill: #e74c3c;
   stroke: none;
 }
 .home .video-break .blue-path {
@@ -36,7 +36,7 @@
   position: relative;
   z-index: 1;
   opacity: 1;
-  background:#ECF0F1;
+  background:#e74c3c;
 }
 .home #text {
   position: absolute;
@@ -94,6 +94,17 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
+}
+
+.home .mission h1 {
+  margin-bottom:20px;
+}
+
+.home .mission-content {
+  max-width:800px;
+  margin:0 auto;
+  font-size:36px;
+  font-weight: 600;
 }
 
 

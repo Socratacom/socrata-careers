@@ -345,6 +345,11 @@ svg.slant {
   margin-bottom:-5px;
   line-height: normal;
 }
+
+.alizarin {
+  background:#e74c3c;
+  color:#fff;
+}
 .pomegranate {
   background:#C0392B;
   color:#fff;
@@ -385,12 +390,12 @@ svg.slant {
   letter-spacing: -1px;
 
 }
-.peter-river h1, .pomegranate h1, .wet-asphalt h1, .carrot h1, .concrete h1, .clouds h1, .green-sea h1, .pomegranate h2, .wet-asphalt h2, .carrot h2, .concrete h2, .clouds h2, .green-sea h2, .peter-river h2 {
+.alizarin h1, .peter-river h1, .pomegranate h1, .wet-asphalt h1, .carrot h1, .concrete h1, .clouds h1, .green-sea h1, .pomegranate h2, .wet-asphalt h2, .carrot h2, .concrete h2, .clouds h2, .green-sea h2, .peter-river h2 {
     max-width: 940px;
     margin-left:auto;
     margin-right:auto;
 }
-section.green-sea, section.wet-asphalt, section.pomegranate, section.carrot, section.concrete, section.clouds, section.peter-river {
+section.alizarin, section.green-sea, section.wet-asphalt, section.pomegranate, section.carrot, section.concrete, section.clouds, section.peter-river {
   position: relative;
 }
 
@@ -595,6 +600,7 @@ figure.effect-chico i {
   background-image: url(../images/stuart-1.png);
   background-repeat: no-repeat;
   margin: -75px auto 0 auto;
+  text-transform: uppercase;
 }
 
 /*******************************/
