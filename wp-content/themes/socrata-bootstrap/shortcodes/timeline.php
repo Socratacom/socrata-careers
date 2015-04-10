@@ -80,8 +80,24 @@ function socrata_timeline() {
       <div class="socrata-timeline-dot">
       </div> <!-- socrata-timeline-dot -->
       <div class="socrata-timeline-content">
+        <h4>February 2010: Medicare.gov becomes a customer</h4>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->
+
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
         <h4>August 2010: Oregon Becomes First State Customer</h4>
         <p>Socrata is proud to bring the State of Oregon on board. Oregon will build a strong open data program and will go on to win multiple awards for data.oregon.gov.</p>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->
+
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
+        <h4>December 2010: World Bank becomes a customer</h4>
       </div> <!-- socrata-timeline-content -->
     </div> <!-- socrata-timeline-block -->
 
@@ -97,9 +113,26 @@ function socrata_timeline() {
       <div class="socrata-timeline-dot">
       </div> <!-- socrata-timeline-dot -->
       <div class="socrata-timeline-content">
+        <h4>August 2011: New York City becomes a customer</h4>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->
+
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
         <h4>October 2012: Socrata Hires 20th Employee</h4>
       </div> <!-- socrata-timeline-content -->
     </div> <!-- socrata-timeline-block -->
+
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
+        <h4>March 2013: Socrata Launches GovStat</h4>
+        <p>GovStat is the first government performance measurement product, and the first product Socrata launches after the open data portal.</p>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->    
 
     <div class="socrata-timeline-block">
       <div class="socrata-timeline-dot">
@@ -123,8 +156,7 @@ function socrata_timeline() {
       <div class="socrata-timeline-dot">
       </div> <!-- socrata-timeline-dot -->
       <div class="socrata-timeline-content">
-        <h4>March 2013: Socrata Launches GovStat</h4>
-        <p>GovStat is the first government performance measurement product, and the first product Socrata launches after the open data portal.</p>
+        <h4>July 2013: Socrata Opens a London Office</h4>
       </div> <!-- socrata-timeline-content -->
     </div> <!-- socrata-timeline-block -->
 
@@ -135,6 +167,22 @@ function socrata_timeline() {
         <h4>October 2013: Socrata Hires 50th Employee</h4>
       </div> <!-- socrata-timeline-content -->
     </div> <!-- socrata-timeline-block -->
+
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
+        <h4>March 2014: City of Eindhoven becomes a customer</h4>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->
+
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
+        <h4>May 2014: City of LA launches their first Open Data Portal</h4>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->  
 
     <div class="socrata-timeline-block">
       <div class="socrata-timeline-dot">
@@ -153,6 +201,13 @@ function socrata_timeline() {
       </div> <!-- socrata-timeline-content -->
     </div> <!-- socrata-timeline-block -->
 
+    <div class="socrata-timeline-block">
+      <div class="socrata-timeline-dot">
+      </div> <!-- socrata-timeline-dot -->
+      <div class="socrata-timeline-content">
+        <h4>February 2015: Socrata Hires 150th Employee</h4>
+      </div> <!-- socrata-timeline-content -->
+    </div> <!-- socrata-timeline-block -->
 
   </div> <!-- socrata-timeline -->
   <div class="timeline-btn-wrap">
