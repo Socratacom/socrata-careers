@@ -13,7 +13,7 @@ get_header(); ?>
     </div>
     <div id="cover_all"></div>
     <div id="main-image"></div>
-    <div id="wistia_ivn4euvi4n" class="wistia_embed backgroundVideo" ></div>
+    <div id="wistia_g92qhkv74k" class="wistia_embed backgroundVideo" ></div>
     <svg class="video-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="150" viewBox="0 0 100 100" preserveAspectRatio="none">
       <path class="white-path" d="M0 10 L50 100 L0 100 Z"></path>
       <path class="blue-path" d="M51 100 L100 100 L100 10 Z"></path>
@@ -26,6 +26,6 @@ get_header(); ?>
   <?php endif;?>
 </div>
 <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
-<div id="wistia_u2kc7ff0qp" class="wistia_embed overlayVideo" ></div>
+<div id="wistia_of3560a3ee" class="wistia_embed overlayVideo" ></div>
 <?php get_template_part( 'call-to-action' ); ?>
 <?php get_footer(); ?>
