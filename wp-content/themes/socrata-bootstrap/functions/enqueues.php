@@ -43,6 +43,14 @@ function homepage_scripts() {
 }
 add_action('wp_enqueue_scripts', 'homepage_scripts');
 
+function jobs_scripts() {
+  if (is_page_template('jobs.php')) {
+    wp_register_style('jobs-css', get_template_directory_uri() . '/css/jobs.css', false, null);
+    wp_enqueue_style('jobs-css');
+  }
+}
+add_action('wp_enqueue_scripts', 'jobs_scripts');
+
 function why_socrata_scripts() {
   if (is_page('brief-history')) {
     wp_register_script('timeline-js', get_template_directory_uri() . '/js/timeline.js', false, null, true);  

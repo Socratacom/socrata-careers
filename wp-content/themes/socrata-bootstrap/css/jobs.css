@@ -1,0 +1,89 @@
+.recruiters .container {
+  height:500px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.recruiters .row {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.recruiters ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.recruiters li {
+  margin:0;
+  display: inline-block;
+  margin-right:15px;
+}
+.recruiters .fa {
+  color:#95a5a6;
+}
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+.recruiters h3 {
+  margin:0;
+  color:#e67e22;
+}
+.jovana {
+  background:url(../images/jovana.jpg);
+}
+.henry {
+  background:url(../images/henry.jpg);
+}
+.jovana, .henry {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+
+
+
+
+.bubble 
+{
+position: relative;
+width: 100%;
+height: auto;
+padding: 20px;
+background: #FFFFFF;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+}
+
+.jovana .bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 10px 15px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -15px;
+left: -10px;
+top: 50%;
+}
+.henry .bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 0 15px 10px;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -15px;
+right: -10px;
+top: 50%;
+}

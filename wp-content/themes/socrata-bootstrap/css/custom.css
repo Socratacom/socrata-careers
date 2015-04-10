@@ -419,23 +419,6 @@ span.playbutton:hover {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.jovana {
-  background:url(../images/jovana.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height:500px;
-  position: relative;
-}
-.jovana h1, .jovana p {
-  color:#fff;
-  text-shadow:0px 0px 10px #000;
-}
-.jovana svg {
-  position:absolute;
-  bottom:0;
-  margin:0;
-}
 
 /*******************************/
 /* Team and Culture */

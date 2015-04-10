@@ -9,7 +9,7 @@
   z-index: 100;
 }
 .home .video-break .white-path {
-  fill: #e74c3c;
+  fill: #95a5a6;
   stroke: none;
 }
 .home .video-break .blue-path {
@@ -36,7 +36,7 @@
   position: relative;
   z-index: 1;
   opacity: 1;
-  background:#e74c3c;
+  background:#95a5a6;
 }
 .home #text {
   position: absolute;
@@ -105,6 +105,7 @@
   margin:0 auto;
   font-size:36px;
   font-weight: 600;
+  padding:0 30px;
 }
 
 
