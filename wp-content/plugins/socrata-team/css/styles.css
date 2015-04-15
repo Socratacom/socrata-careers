@@ -18,9 +18,9 @@
 #team-container .item.w2, #team-container .item.w3 {
   width: 40%;
 }
-/*#team-container .item.w2:nth-child(2n) {
+#team-container .item.w2:nth-child(2n) {
   width:20%;
-}*/
+}
 .team-content-wrapper, .headline-content-wrapper, .blog-content-wrapper {
   padding:15px;
 }
