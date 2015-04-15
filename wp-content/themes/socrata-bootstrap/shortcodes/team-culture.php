@@ -8,14 +8,14 @@ function team_culture_shortcode( $atts ) {
 	ob_start();
 	extract( shortcode_atts( array (
 		'type' => array ('socrata-team', 'socrata-headlines', 'post'),
-		'order' => 'desc',
 		'orderby' => 'rand',
+		'order' => 'desc',
 		'posts' => 100,
 		), $atts ) );
 		$options = array(
 		'post_type' => $type,
-		'order' => $order,
 		'orderby' => $orderby,
+		'order' => $order,
 		'posts_per_page' => $posts,
 	);
 	$query = new WP_Query( $options );

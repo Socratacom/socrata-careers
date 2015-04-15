@@ -15,6 +15,16 @@ $fields = array(
 		'id'	=> $prefix.'quote', // field id and name
 		'type'	=> 'textarea' // type of field
 	),
+	array( // Editor
+	    'label' => 'Spotlight Text',
+	    'desc'  => '',
+	    'id'    => 'editorField',
+	    'type'  => 'editor',
+	    'sanitizer' => 'wp_kses_post',
+	    'settings' => array(
+	        'textarea_name' => 'editorField'
+	    )
+	),
 );
 
 // Get and return the values for the URL and description
@@ -22,11 +32,13 @@ function get_socrata_team_meta() {
   global $post;
   $socrata_team_jobtitle = get_post_meta($post->ID, 'socrata_team_jobtitle', true); // 0
   $socrata_team_quote = get_post_meta($post->ID, 'socrata_team_quote', true); // 1
+  $editorField = get_post_meta($post->ID, 'editorField', true); // 2
 
 
   return array(
 	$socrata_team_jobtitle,
-	$socrata_team_quote
+	$socrata_team_quote,
+	$editorField
   );
 }
 
