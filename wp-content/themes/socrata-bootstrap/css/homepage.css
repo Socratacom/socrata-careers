@@ -1,6 +1,9 @@
 .home #page {
   padding:0 0 60px 0;
 }
+html {
+  height:100%;
+}
 
 .home svg.video-break {
   position:absolute;
@@ -9,11 +12,11 @@
   z-index: 100;
 }
 .home .video-break .white-path {
-  fill: #95a5a6;
+  fill: #3498db;
   stroke: none;
 }
 .home .video-break .blue-path {
-  fill: #3498db;
+  fill: #2c3e50;
   stroke: none;
 }
 
