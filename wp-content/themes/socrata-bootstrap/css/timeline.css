@@ -202,6 +202,8 @@
   background: #ECF0F1;
   border-radius: 0.25em;
   padding: 1em;
+
+  box-shadow: 0 8px 6px -6px #c7c7c7;
 }
 
 .socrata-timeline-content p{
@@ -212,6 +214,7 @@
   content: "";
   display: table;
   clear: both;
+
 }
 .socrata-timeline-content::before {
   content: '';
@@ -220,8 +223,9 @@
   right: 100%;
   height: 0;
   width: 0;
-  border: 7px solid transparent;
-  border-right: 7px solid #ECF0F1;
+  border: 10px solid transparent;
+  border-right: 10px solid #ECF0F1;
+
 }
 @media only screen and (min-width: 1170px) {
   .socrata-timeline-content {
