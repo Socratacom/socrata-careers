@@ -83,7 +83,7 @@ function team_culture_shortcode( $atts ) {
   extract( shortcode_atts( array (
     'type' => array ('socrata-team', 'socrata-headlines', 'post'),
     'orderby' => 'modified',
-    'order' => 'desc',
+    'order' => 'rand',
     'posts' => 100,
     ), $atts ) );
     $options = array(
