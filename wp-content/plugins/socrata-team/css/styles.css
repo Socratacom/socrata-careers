@@ -1,7 +1,9 @@
 /*******************************/
 /* Team and Culture */
 /*******************************/
-
+.team .item img {
+	width:100%;
+}
 #team-container {
   margin-top:50px;
 }
@@ -16,9 +18,9 @@
 #team-container .item.w2, #team-container .item.w3 {
   width: 40%;
 }
-#team-container .item.w2:nth-child(2n) {
+/*#team-container .item.w2:nth-child(2n) {
   width:20%;
-}
+}*/
 .team-content-wrapper, .headline-content-wrapper, .blog-content-wrapper {
   padding:15px;
 }
@@ -139,6 +141,7 @@ figure.effect-chico i {
 	border-bottom:#ddd solid 1px;
 	padding-bottom:1em;
 }
+
 @media screen and (max-width: 768px) {
 	.team .profile-image {
 		max-width:150px;
@@ -148,5 +151,21 @@ figure.effect-chico i {
 	.team .modal-content h1, .team .modal-content h4 {
 		text-align: center;
 	}
+	#team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
+		width: 33.3%;
+	}
+}
 
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 736px) {
+	#team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
+		width: 50%;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 414px) {
+	#team-container .grid-sizer, #team-container .item, #team-container .item.w2, #team-container .item.w3, #team-container .item.w2:nth-child(2n) {
+		width: 100%;
+	}
 }
