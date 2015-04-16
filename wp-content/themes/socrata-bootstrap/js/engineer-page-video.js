@@ -33,18 +33,6 @@ fullScreenVideo = {
       // Video in the background
       // Video to be shown in the overlay
       overlayEmbed = Wistia.embed(fullScreenVideo.overlayVideo, videoOptions);
-
-      /**
-       * We load the thumbnail in the background while we wait
-       * for the video to load and play. Once loaded, we pause, reset to 
-       * frame zero, show the video then play it.
-       */
-      wistiaEmbed.bind("play", function(){
-        wistiaEmbed.pause();
-        wistiaEmbed.time(0);
-        wistiaEmbed.play();
-        return this.unbind;
-      });
     },
     /**
      * Plays the video set as overlayEmbed
