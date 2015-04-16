@@ -446,7 +446,13 @@ span.playbutton:hover {
 #ex:hover {
   opacity: 1;
 }
-
+#videoContainer {
+	overflow: hidden;
+	top:0;
+	left:0;
+	z-index: 1000;
+	left: -3000px;
+}
 
 
 /*******************************/

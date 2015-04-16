@@ -33,6 +33,8 @@ fullScreenVideo = {
       // Video in the background
       // Video to be shown in the overlay
       overlayEmbed = Wistia.embed(fullScreenVideo.overlayVideo, videoOptions);
+
+
     },
     /**
      * Plays the video set as overlayEmbed
@@ -41,7 +43,7 @@ fullScreenVideo = {
     playVideo: function()
     {
       $(fullScreenVideo.overlayVideoDiv).css("left", 0).css("visibility", "visible");
-      $("#videoContainer").css("display", "block");
+      $("#videoContainer").css("left", 0);
       overlayEmbed.plugin.cropFill.resize();
       $("#ex").css("right", 32);
       overlayEmbed.play();
@@ -54,7 +56,7 @@ fullScreenVideo = {
     exitVideo: function()
     {
       $(fullScreenVideo.overlayVideoDiv).css("left", -3000).css("visibility", "hidden");
-      $("#videoContainer").css("display", "none");
+      $("#videoContainer").css("left", -3000);
       $("#ex").css("right", -3000);
       overlayEmbed.pause();
       overlayEmbed._keyBindingsActive = false;
@@ -67,9 +69,8 @@ fullScreenVideo = {
     {
       var width = $( window ).width();
       var height = $( window ).height();      
-      $("#videoContainer").css("width", width).css("height", height).css("display", "none");
-    }
-     
+      $("#videoContainer").css("width", width).css("height", height).css("position", "fixed");
+    }     
 }
 
 /**
