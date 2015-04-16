@@ -72,4 +72,16 @@ function team_and_culture_scripts() {
 }
 add_action('wp_enqueue_scripts', 'team_and_culture_scripts');
 
+function engineers_scripts() {
+  if (is_page('engineers')) {
+    wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
+    wp_enqueue_script('wistiaExternal');
+    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
+    wp_enqueue_script('wistiaCropFill');
+    wp_register_script('engineerVideo', get_template_directory_uri() . '/js/engineer-page-video.js', false, null, true);    
+    wp_enqueue_script('engineerVideo');
+  }
+}
+add_action('wp_enqueue_scripts', 'engineers_scripts');
+
 

@@ -11,7 +11,6 @@ get_header(); ?>
         <span class="glyphicon glyphicon-play-circle playbutton" aria-hidden="true"></span>
       </div>
     </div>
-    <div id="cover_all"></div>
     <div id="main-image"></div>
     <div id="wistia_g92qhkv74k" class="wistia_embed backgroundVideo" ></div>
     <svg class="video-break" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="150" viewBox="0 0 100 100" preserveAspectRatio="none">

@@ -20,13 +20,6 @@ html {
   stroke: none;
 }
 
-.home .overlayVideo {
-  position: fixed !important;
-  left: -3000px;
-  top: 0px;
-  z-index: 2000;
-  visibility: hidden;
-}
 .home .backgroundVideo {
   z-index: 4;
   visibility: hidden;
@@ -39,7 +32,7 @@ html {
   position: relative;
   z-index: 1;
   opacity: 1;
-  background:#95a5a6;
+  background:#3498db;
 }
 .home #text {
   position: absolute;
@@ -73,21 +66,7 @@ html {
   height: 100%;
   width: 100%;
 }
-.home #ex {
-  position: fixed;
-  right: -3000px;
-  top: 32px;
-  z-index: 3000;
-  cursor: pointer;
-  opacity: 0.8;
-}
-.home #ex span {
-  font-size: 32px;
-  text-shadow: 0px 0px 5px #999;
-}
-.home #ex:hover {
-  opacity: 1;
-}
+
 .home #main-image {
   position: absolute;
   top: 0;
