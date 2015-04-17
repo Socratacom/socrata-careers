@@ -33,7 +33,7 @@ get_header(); ?>
           <div class="bubble">
             <h3>Meet Jovana Teodorovic</h3>
             <p>Director of Talent</p>
-            <p><i>"As Socrata's Director of Talent I'm fortunate to work with some of the most intelligent, most creative and wittiest people in the tech industry. I love coming to work every day and seeing the passion everyone has for what we are doing, and the remarkable work that occurs as a result of that passion."</i></p>
+            <p><i>"As the Director of Talent at Socrata, I partner with the leadership team ensure the company attracts and retains the best talent in the nation. I get to work with exceptional people who are passionate about data, their customers and Socrata's road to greatness. Watching Socrata grow over the past year has been the highlight of my career and I can't wait to see what happens next!"</i></p>
             <ul>
               <li><i class="fa fa-envelope"></i> <a href="mailto:jovana.teodorovic@socrata.com">Contact Me</a></li>
             </ul>
