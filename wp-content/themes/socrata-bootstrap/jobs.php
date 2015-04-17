@@ -51,7 +51,7 @@ get_header(); ?>
         <h1 class="text-center">Our Offices</h1>
         <div class="narrow-content">
           <p class="text-center">Socrata is loctated in Seattle, WA and Washington DC. These cities offer a vibriant and exciting lifestyle and are a great place to work. Our offices are located next numerous amenities.</p>
-          <p class="text-center"><a href="#" class="btn btn-primary">Why Work at Socrata?</a></p>
+          <p id="playbutton" class="text-center"><a class="btn btn-primary playbutton" aria-hidden="true">Why Work at Socrata?</a></p>
         </div>
         <div class="row">
           <div class="col-sm-6">
@@ -90,6 +90,10 @@ get_header(); ?>
     </div>
     <?php echo do_shortcode('[slantRight color="#fff"]'); ?>
   </section>
+</div>
+<div id="videoContainer">
+  <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
+  <div id="wistia_of3560a3ee" class="wistia_embed overlayVideo" ></div>
 </div>
 
 
