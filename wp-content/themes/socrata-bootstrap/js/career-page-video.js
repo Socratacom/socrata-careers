@@ -71,7 +71,7 @@ fullScreenVideo = {
       var height = $( window ).height();      
       $("#videoContainer").css("width", width).css("height", height).css("position", "fixed");
     }     
-} unQLra67
+}
 
 /**
  * When the doc is ready, fix the video and images sizes
