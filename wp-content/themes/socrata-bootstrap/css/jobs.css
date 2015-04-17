@@ -43,10 +43,6 @@
   position: relative;
 }
 
-
-
-
-
 .bubble 
 {
 position: relative;
@@ -59,7 +55,7 @@ background: #FFFFFF;
 border-radius: 0px;
 }
 
-.jovana .bubble:after 
+.henry .bubble:after 
 {
 content: '';
 position: absolute;
@@ -73,7 +69,7 @@ margin-top: -15px;
 left: -10px;
 top: 50%;
 }
-.henry .bubble:after 
+.jovana .bubble:after 
 {
 content: '';
 position: absolute;
@@ -86,4 +82,8 @@ z-index: 1;
 margin-top: -15px;
 right: -10px;
 top: 50%;
+}
+
+.locations h3 {
+  margin-bottom:20px;
 }
