@@ -55,7 +55,7 @@ get_header(); ?>
         </div>
         <div class="row">
           <div class="col-sm-6">
-            <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/dc.png"></p>
+            <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/seattle.png"></p>
             <h3 class="text-center">Socrata in Seattle</h3>
             <p class="text-center">83 S. King Street, Suite 107<br>Seattle WA, 98104</p>
             <p class="text-center"><a href="https://goo.gl/maps/BMZ1q" target="_blank">View Map</a><br><a href="/wp-content/uploads/2015/04/MovingToSeattle_DS_R2.pdf">Download Moving to Seattle</a></p>
