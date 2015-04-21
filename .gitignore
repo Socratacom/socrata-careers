@@ -28,6 +28,7 @@ wp-content/*
 wp-content/plugins/*
 !wp-content/plugins/socrata-headlines/
 !wp-content/plugins/socrata-team/
+!wp-content/plugins/socrata-timeline/
  
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
