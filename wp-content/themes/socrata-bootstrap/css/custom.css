@@ -524,6 +524,7 @@ ul.kevin {
 }
 .kevin li {
 	display: inline-block;
+	margin:0;
 }
 .kevin li:first-child {
 	padding-right:10px;
