@@ -13,10 +13,11 @@ Thumbs.db
 # PHPStorm
 *.idea
 
-# Ignore everything in the root except the "wp-content" directory.
+# Ignore everything in the root except the "wp-content" directory and the FrameResize.html.
 /*
 !.gitignore
 !wp-content/
+!FrameResize.html
  
 # Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
 wp-content/*
