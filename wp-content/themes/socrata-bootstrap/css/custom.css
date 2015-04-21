@@ -503,19 +503,7 @@ span.glyphicon-play-circle:hover {
   text-transform: uppercase;
 }
 
-/*******************************/
-/* iframe */
-/*******************************/
 
-.video-wrapper {
-  max-width:940px;
-  margin:0 auto;  
-  box-shadow: 0px 0px 10px #222;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHN0eWxlPi5zdHlsZTB7b3BhY2l0eTowLjI7ZmlsbDojZmZmO30uc3R5bGUxe2ZpbGw6I2ZmZjt9PC9zdHlsZT48cGF0aCBkPSJNMjAuMjAxIDUuMTY5Yy04LjI1NCAwLTE0Ljk0NiA2LjY5Mi0xNC45NDYgMTQuOTQ2YzAgOC4zIDYuNyAxNC45IDE0LjkgMTQuOSBzMTQuOTQ2LTYuNjkxIDE0Ljk0Ni0xNC45NDZDMzUuMTQ2IDExLjkgMjguNSA1LjIgMjAuMiA1LjE2OXogTTIwLjIwMSAzMS43NDljLTYuNDI1IDAtMTEuNjM0LTUuMjA4LTExLjYzNC0xMS42MzQgYzAtNi40MjUgNS4yMDktMTEuNjM0IDExLjYzNC0xMS42MzRjNi40MjUgMCAxMS42IDUuMiAxMS42IDExLjYzNEMzMS44MzQgMjYuNSAyNi42IDMxLjcgMjAuMiAzMS43NDl6IiBjbGFzcz0ic3R5bGUwIi8+PHBhdGggZD0iTTI2LjAxMyAxMC4wNDdsMS42NTQtMi44NjZjLTIuMTk4LTEuMjcyLTQuNzQzLTIuMDEyLTcuNDY2LTIuMDEyaDB2My4zMTJoMCBDMjIuMzIgOC41IDI0LjMgOS4xIDI2IDEwLjA0N3oiIGNsYXNzPSJzdHlsZTEiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZVR5cGU9InhtbCIgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMjAgMjAiIHRvPSIzNjAgMjAgMjAiIGR1cj0iMC41cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L3BhdGg+PC9zdmc+');
-  background-repeat: no-repeat;
-  background-size: 50px;
-  background-position: center center;
-}
 
 /*******************************/
 /* Jobvite */
@@ -529,12 +517,16 @@ iframe.jvcontainer {
 /* message */
 /*******************************/
 
-.message {
-  max-width: 940px;
-  margin:0 auto;
+ul.kevin {
+	list-style-type: none;
+	margin:0;
+	padding: 0;
 }
-.message img {
-  padding:0 30px;
+.kevin li {
+	display: inline-block;
+}
+.kevin li:first-child {
+	padding-right:10px;
 }
 
 /*******************************/
