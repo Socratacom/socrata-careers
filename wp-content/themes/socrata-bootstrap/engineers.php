@@ -9,7 +9,16 @@ get_header(); ?>
       <div class="section-wrapper">
         <h1 class="text-center">Engineers wanted!</h1>
         <h2 class="text-center">Get to know some of our engineers. Watch this short video.</h2>
-        <p id="playbutton" class="text-center"><span class="glyphicon glyphicon-play-circle playbutton" aria-hidden="true"></span></p>
+
+        <div id="playbutton">
+          <div class="hidden-xs hidden-sm">
+            <p class="text-center"><span class="glyphicon glyphicon-play-circle playbutton" aria-hidden="true"></span></p>
+          </div>
+          <div class="hidden-md hidden-lg">
+            <p class="text-center"><a href="//fast.wistia.net/embed/iframe/mknj6l5g3l?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=853]"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
+          </div>
+          <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>   
+        </div>
       </div>
     </div>
     <?php echo do_shortcode('[slantLeft color="#fff;"]'); ?>

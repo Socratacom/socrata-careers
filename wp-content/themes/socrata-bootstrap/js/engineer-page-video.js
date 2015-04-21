@@ -85,7 +85,7 @@ $(document).ready(function() {
 $(window).resize(fullScreenVideo.fixPosition);
 
 // When the play button is clicked, call the play function
-$(".glyphicon-play-circle").click(fullScreenVideo.playVideo);
+$(".playbutton").click(fullScreenVideo.playVideo);
 
 // When the "X" is clicked, exit the video
 $("#ex").click(fullScreenVideo.exitVideo);

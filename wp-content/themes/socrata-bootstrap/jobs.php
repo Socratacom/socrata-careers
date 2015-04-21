@@ -51,7 +51,13 @@ get_header(); ?>
         <h1 class="text-center">Our Offices</h1>
         <div class="narrow-content">
           <p class="text-center">Socrata is loctated in Seattle, WA and Washington DC. These cities offer a vibriant and exciting lifestyle and are a great place to work. Our offices are located next numerous amenities.</p>
-          <p id="playbutton" class="text-center"><a class="btn btn-primary playbutton" aria-hidden="true">Why Work at Socrata?</a></p>
+          <div class="hidden-xs hidden-sm">
+            <p id="playbutton" class="text-center"><a class="btn btn-primary playbutton" aria-hidden="true">Why Work at Socrata?</a></p>
+          </div>
+          <div class="hidden-md hidden-lg">
+            <p class="text-center"><a href="//fast.wistia.net/embed/iframe/of3560a3ee?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=853] btn btn-primary">Why Work at Socrata?</a></p>
+          </div>
+          <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
         </div>
         <div class="row">
           <div class="col-sm-6">

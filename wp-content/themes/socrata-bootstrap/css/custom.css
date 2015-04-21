@@ -402,7 +402,7 @@ section.alizarin, section.green-sea, section.wet-asphalt, section.pomegranate, s
   position: relative;
 }
 
-span.playbutton {
+span.glyphicon-play-circle{
   font-size: 75px;
   color:#fff;
   cursor: pointer;
@@ -416,7 +416,7 @@ span.playbutton {
   -webkit-transform: scale(1.12);
   transform: scale(1.12);
 }
-span.playbutton:hover {
+span.glyphicon-play-circle:hover {
   opacity: 1;
   opacity: 1;
   -webkit-transform: scale(1);
