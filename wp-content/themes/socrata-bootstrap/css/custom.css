@@ -501,6 +501,14 @@ span.glyphicon-play-circle:hover {
   background-repeat: no-repeat;
   margin: -75px auto 0 auto;
   text-transform: uppercase;
+  position:relative;
+}
+.cta-stuart a {
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
 }
 
 
@@ -539,6 +547,14 @@ ul.kevin {
   position: absolute;
   bottom:-30px;
   z-index: 100;
+}
+.stuart a {
+	display:block;
+	height: 150px;
+	width:100px;
+	background:transparent;
+	margin:0 auto;
+
 }
 
 .stuart.engineer {
