@@ -50,7 +50,7 @@ function add_timeline_icon(){
 ?>
 <style>
 #adminmenu .menu-icon-socrata-timeline div.wp-menu-image:before {
-  content: '\f307';
+  content: '\f469';
 }
 </style>
 <?php
