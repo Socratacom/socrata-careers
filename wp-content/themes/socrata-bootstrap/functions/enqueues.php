@@ -54,15 +54,6 @@ function jobs_scripts() {
 }
 add_action('wp_enqueue_scripts', 'jobs_scripts');
 
-function why_socrata_scripts() {
-  if (is_page('brief-history')) {
-    wp_register_script('timeline-js', get_template_directory_uri() . '/js/timeline.js', false, null, true);  
-    wp_enqueue_script('timeline-js');
-    wp_register_style('timeline-css', get_template_directory_uri() . '/css/timeline.css', false, null);
-    wp_enqueue_style('timeline-css');
-  }
-}
-add_action('wp_enqueue_scripts', 'why_socrata_scripts');
 
 function team_and_culture_scripts() {
   if (is_page('team-and-culture')) {

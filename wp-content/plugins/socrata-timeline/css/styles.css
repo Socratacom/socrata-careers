@@ -22,18 +22,19 @@
     color: #fff;
     padding: 5px 15px;
     display: inline-block;
+    font-size: 12px;
 }
 
 .timeline-btn.now {
    position: absolute;
     top: 20px;
-    left: -10px;
+    left: -18px;
 }
 
 .timeline-btn.launch {
     position: absolute;
     bottom: 20px;
-    left: -20px;
+    left: -7px;
 }
 
 #socrata-timeline {
@@ -62,7 +63,17 @@
     margin-left: -2px;
   }
 }
-
+.timeline-date {
+  font-size:13px;
+  color:#9d9da7;
+}
+.timeline-text {
+  margin-top:15px;
+}
+.socrata-timeline-block h4 {
+  margin:5px 0;
+  font-size: 16px;
+}
 .socrata-timeline-block {
   position: relative;
   margin: 2em 0;
@@ -79,6 +90,10 @@
   margin-bottom: 0;
 }
 @media only screen and (min-width: 1170px) {
+  .socrata-timeline-block h4 {
+    margin:0 0 5px 0;
+    font-size: 18px;
+  }
   .socrata-timeline-block {
     margin: 4em 0;
   }
@@ -117,21 +132,40 @@
   background: #2980B9;
 }
 
+.socrata-timeline-image {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  border: 4px solid #fff;
+  width: 50px;
+  height: 50px;
+}
+
 @media only screen and (min-width: 1170px) {
   .socrata-timeline-dot {
     width: 20px;
     height: 20px;
     left: 50%;
-    top: 20px;
+    top: 23px;
     margin-left: -10px;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
   }
-  .cssanimations .socrata-timeline-dot.is-hidden {
+  .socrata-timeline-image {
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    top: 0px;
+    margin-left: -35px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .cssanimations .socrata-timeline-dot.is-hidden, .cssanimations .socrata-timeline-image.is-hidden {
     visibility: hidden !important;
   }
-  .cssanimations .socrata-timeline-dot.bounce-in {
+  .cssanimations .socrata-timeline-dot.bounce-in, .cssanimations .socrata-timeline-image.bounce-in {
     visibility: visible;
     -webkit-animation: socrata-bounce-1 0.6s;
     -moz-animation: socrata-bounce-1 0.6s;
@@ -202,12 +236,11 @@
   background: #ECF0F1;
   border-radius: 0.25em;
   padding: 1em;
-
   box-shadow: 0 8px 6px -6px #c7c7c7;
 }
 
 .socrata-timeline-content p{
-     color: #9d9da7;
+     color: #444;
 }
 
 .socrata-timeline-content:after {
