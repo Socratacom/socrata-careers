@@ -7,6 +7,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.modal-open {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+}
+
 hr {
 	border:0;
 	color:#ddd;

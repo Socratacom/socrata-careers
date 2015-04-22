@@ -25,10 +25,8 @@ function script_enqueues()
   wp_enqueue_script('classie-js');
   wp_register_script('gnmenu-js', get_template_directory_uri() . '/js/gnmenu.js', false, null, true);
   wp_enqueue_script('gnmenu-js');
-  wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
-  wp_enqueue_script('wistiaExternal');
-  wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
-  wp_enqueue_script('wistiaCropFill');
+  wp_register_script('smooth-scroll-js', get_template_directory_uri() . '/js/smooth-scrolling.js', false, null, true);
+  wp_enqueue_script('smooth-scroll-js');
 
 }
 add_action('wp_enqueue_scripts', 'script_enqueues', 100);
@@ -36,6 +34,10 @@ add_action('wp_enqueue_scripts', 'script_enqueues', 100);
 // Targeted Scripts
 function homepage_scripts() {
   if (is_page_template('homepage.php')) {
+    wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
+    wp_enqueue_script('wistiaExternal');
+    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
+    wp_enqueue_script('wistiaCropFill');
     wp_register_script('homeVideo', get_template_directory_uri() . '/js/home-page-video.js', false, null, true);
     wp_register_style('homepage-css', get_template_directory_uri() . '/css/homepage.css', false, null);
     wp_enqueue_script('homeVideo');
@@ -45,7 +47,11 @@ function homepage_scripts() {
 add_action('wp_enqueue_scripts', 'homepage_scripts');
 
 function jobs_scripts() {
-  if (is_page_template('jobs.php')) {
+  if (is_page_template('jobs.php')) {    
+    wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
+    wp_enqueue_script('wistiaExternal');
+    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
+    wp_enqueue_script('wistiaCropFill');
     wp_register_script('jobsVideo', get_template_directory_uri() . '/js/career-page-video.js', false, null, true);    
     wp_enqueue_script('jobsVideo');
     wp_register_style('jobs-css', get_template_directory_uri() . '/css/jobs.css', false, null);
@@ -68,6 +74,10 @@ add_action('wp_enqueue_scripts', 'team_and_culture_scripts');
 
 function engineers_scripts() {
   if (is_page('engineers')) {
+    wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
+    wp_enqueue_script('wistiaExternal');
+    wp_register_script('wistiaCropFill', 'https://fast.wistia.com/labs/crop-fill/plugin.js', false, null, false);
+    wp_enqueue_script('wistiaCropFill');
     wp_register_script('engineerVideo', get_template_directory_uri() . '/js/engineer-page-video.js', false, null, true);    
     wp_enqueue_script('engineerVideo');
   }
