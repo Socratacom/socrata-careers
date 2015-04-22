@@ -65,7 +65,6 @@
 }
 .timeline-date {
   font-size:13px;
-  color:#9d9da7;
 }
 .timeline-text {
   margin-top:15px;
@@ -233,14 +232,10 @@
 .socrata-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: #ECF0F1;
+  background: #2c3e50;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 8px 6px -6px #c7c7c7;
-}
-
-.socrata-timeline-content p{
-     color: #444;
+  color:#fff;
 }
 
 .socrata-timeline-content:after {
@@ -257,7 +252,7 @@
   height: 0;
   width: 0;
   border: 10px solid transparent;
-  border-right: 10px solid #ECF0F1;
+  border-right: 10px solid #2c3e50;
 
 }
 @media only screen and (min-width: 1170px) {
@@ -271,7 +266,7 @@
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #ECF0F1;
+    border-left-color: #2c3e50;
   }
   .socrata-timeline-block:nth-child(even) .socrata-timeline-content {
     float: right;
@@ -281,7 +276,7 @@
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #ECF0F1;
+    border-right-color: #2c3e50;
   }
   .socrata-timeline-block:nth-child(even) .socrata-timeline-content {
     text-align: left;
