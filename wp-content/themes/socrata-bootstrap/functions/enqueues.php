@@ -46,6 +46,14 @@ function homepage_scripts() {
 }
 add_action('wp_enqueue_scripts', 'homepage_scripts');
 
+function brief_history_scripts() {
+  if (is_page('brief-history')) {
+    wp_register_script('smooth-scroll-js', get_template_directory_uri() . '/js/smooth-scrolling.js', false, null, true);
+    wp_enqueue_script('smooth-scroll-js');
+  }
+}
+add_action('wp_enqueue_scripts', 'brief_history_scripts');
+
 function jobs_scripts() {
   if (is_page_template('jobs.php')) {    
     wp_register_script('wistiaExternal', 'https://fast.wistia.com/assets/external/E-v1.js', false, null, false);
@@ -59,7 +67,6 @@ function jobs_scripts() {
   }
 }
 add_action('wp_enqueue_scripts', 'jobs_scripts');
-
 
 function team_and_culture_scripts() {
   if (is_page('team-and-culture')) {
