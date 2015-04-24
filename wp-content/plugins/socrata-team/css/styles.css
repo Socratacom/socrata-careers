@@ -117,7 +117,7 @@ figure.effect-chico i {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
-.team a {
+.team .item a {
 	cursor: pointer;
 	color:#222;
 }
