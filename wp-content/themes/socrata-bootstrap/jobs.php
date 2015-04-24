@@ -54,33 +54,38 @@ get_header(); ?>
     <div class="container">
       <div class="section-wrapper">
         <h1 class="text-center">Our Offices</h1>
-        <div class="narrow-content">
-          <p class="text-center">Socrata is loctated in Seattle, WA and Washington DC. These cities offer a vibriant and exciting lifestyle and are a great place to work. Our offices are located next numerous amenities.</p>
-          <div class="hidden-xs hidden-sm">
-            <p id="playbutton" class="text-center"><a class="btn btn-primary playbutton" aria-hidden="true">Why Work at Socrata?</a></p>
-          </div>
-          <div class="hidden-md hidden-lg">
-            <p class="text-center"><a href="//fast.wistia.net/embed/iframe/of3560a3ee?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=853] btn btn-primary">Why Work at Socrata?</a></p>
-          </div>
-          <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+        <p class="text-center narrow-content" style="margin-bottom:1.63em">Socrata is loctated in Seattle, WA and Washington DC. These cities offer a vibriant and exciting lifestyle and are a great place to work. Our offices are located next numerous amenities.</p>
+        <div class="hidden-xs hidden-sm">
+          <p id="playbutton" class="text-center"><a class="btn btn-primary playbutton" aria-hidden="true">Why Work at Socrata?</a></p>
         </div>
+        <div class="hidden-md hidden-lg">
+          <p class="text-center"><a href="//fast.wistia.net/embed/iframe/of3560a3ee?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=853] btn btn-primary">Why Work at Socrata?</a></p>
+        </div>
+        <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/seattle.png" class="img-responsive" style="margin:auto;"></p>
             <h3 class="text-center">Socrata in Seattle</h3>
             <p class="text-center">83 S. King Street, Suite 107<br>Seattle WA, 98104</p>
             <p class="text-center"><a href="https://goo.gl/maps/BMZ1q" target="_blank">View Map</a><br><a href="/wp-content/uploads/2015/04/MovingToSeattle_DS_R2.pdf">Download Moving to Seattle</a></p>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/dc.png" class="img-responsive" style="margin:auto;"></p>
             <h3 class="text-center">Socrata in Washington, DC</h3>
             <p class="text-center">1150 17th Street NW, Suite 200<br>Washington, D.C.</p>
             <p class="text-center"><a href="https://goo.gl/maps/uY3g9" target="_blank">View Map</a></p>
           </div>
+          <div class="col-sm-4">
+            <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/london.png" class="img-responsive" style="margin:auto;"></p>
+            <h3 class="text-center">Socrata in London</h3>
+            <p class="text-center">14-22 Elder St.<br>London E1 6BT, UK</p>
+            <p class="text-center"><a href="https://goo.gl/maps/VKghj" target="_blank">View Map</a></p>
+          </div>   
         </div>
       </div>
     </div>
-  </section>
+  </section> 
+
   <section class="henry recruiters">
     <div class="container">
       <div class="row">        
