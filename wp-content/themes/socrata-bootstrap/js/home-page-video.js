@@ -26,7 +26,7 @@ fullScreenVideo = {
       Wistia.obj.merge(videoOptions, {
         plugin: {
           cropFill: {
-            src: "//fast.wistia.com/labs/crop-fill/plugin.js"
+            src: "https://fast.wistia.com/labs/crop-fill/plugin.js"
           }
         }
       });
