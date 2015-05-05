@@ -15,7 +15,7 @@ get_header(); ?>
             <p class="text-center"><span class="glyphicon glyphicon-play-circle playbutton" aria-hidden="true"></span></p>
           </div>
           <div class="hidden-md hidden-lg">
-            <p class="text-center"><a href="//fast.wistia.net/embed/iframe/mknj6l5g3l?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=853]"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
+            <p class="text-center"><a href="//fast.wistia.net/embed/iframe/outkuximjq?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=853]"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
           </div>
           <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>   
         </div>
@@ -31,7 +31,7 @@ get_header(); ?>
 </div>
 <div id="videoContainer">
   <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
-  <div id="wistia_mknj6l5g3l" class="wistia_embed overlayVideo" ></div>
+  <div id="wistia_outkuximjq" class="wistia_embed overlayVideo" ></div>
 </div>
 <?php get_template_part( 'call-to-action' ); ?>
 <?php get_footer(); ?>

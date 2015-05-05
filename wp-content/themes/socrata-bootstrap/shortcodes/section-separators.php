@@ -21,12 +21,3 @@ function slant_left($atts) {
     <path d="M100 0 L0 100 L100 100 Z" style="fill:'.$color.'; stroke:none;" />
 	</svg>';
 }
-
-
-
-
-
-
-
-
-
