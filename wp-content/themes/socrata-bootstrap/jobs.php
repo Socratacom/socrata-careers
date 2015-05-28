@@ -38,7 +38,7 @@ get_header(); ?>
                 <p>Director of Talent</p>
               </li> 
             </ul>            
-            <p><i>"As the Director of Talent at Socrata, I partner with the leadership team ensure the company attracts and retains the best talent in the nation. I get to work with exceptional people who are passionate about data, their customers and Socrata's road to greatness. Watching Socrata grow over the past year has been the highlight of my career and I can't wait to see what happens next!"</i></p>
+            <p><i>"As the Director of Talent at Socrata, I partner with the leadership team to ensure the company attracts and retains the best talent in the nation. I get to work with exceptional people who are passionate about data, their customers and Socrata's road to greatness. Watching Socrata grow over the past year has been the highlight of my career and I can't wait to see what happens next!"</i></p>
             <ul>
               <li><i class="fa fa-envelope"></i> <a href="mailto:jovana.teodorovic@socrata.com">Contact Me</a></li>
             </ul>
@@ -54,7 +54,7 @@ get_header(); ?>
     <div class="container">
       <div class="section-wrapper">
         <h1 class="text-center">Our Offices</h1>
-        <p class="text-center narrow-content" style="margin-bottom:1.63em">Socrata is loctated in Seattle, WA and Washington DC. These cities offer a vibriant and exciting lifestyle and are a great place to work. Our offices are located next numerous amenities.</p>
+        <p class="text-center narrow-content" style="margin-bottom:1.63em">Socrata is located in Seattle WA, Washington DC, and London UK. These cities offer a vibrant exciting lifestyle and are a great place to work. Our offices are located next to numerous amenities.</p>
         <div class="hidden-xs hidden-sm">
           <p id="playbutton" class="text-center"><a class="btn btn-primary playbutton" aria-hidden="true">Why Work at Socrata?</a></p>
         </div>
