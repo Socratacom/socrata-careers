@@ -350,7 +350,7 @@ ul#menu-header {
 
 /* Colors */
 svg.slant {
-  margin-bottom:-5px;
+  margin-bottom:-6px;
   line-height: normal;
 }
 
@@ -1089,6 +1089,35 @@ fieldset[disabled] .btn-link:focus {
 .btn-toolbar .btn > [class^="fui-"] {
   font-size: 16px;
   margin: 0 1px;
+}
+
+
+.hiring-process {
+	counter-reset: my-badass-counter;
+}
+.hiring-process dt {
+	position: relative;
+	padding-left:60px;
+	padding-top:15px;
+	font-size:18px;
+	margin-bottom:15px;
+}
+.hiring-process dd {
+	padding-left:60px;
+	margin-bottom:30px;
+	font-size:14px;
+	font-weight: 300;
+}
+
+.hiring-process dt:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	font-size:50px;
+	position: absolute;
+	top:0;
+	left:0;
+	color:#e67e22;
+
 }
 
 /*==========  Non-Mobile First Method  ==========*/

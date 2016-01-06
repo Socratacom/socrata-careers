@@ -19,6 +19,47 @@ get_header(); ?>
       <div class="section-wrapper">
         <div class="row">
           <div class="col-sm-12">
+            <p class="text-center"><a href="#process" class="btn btn-primary">The Hiring Process</a> <a href="#positions" class="btn btn-primary">Open Positions</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php echo do_shortcode( '[slantRight color="#ecf0f1;"]' ); ?>
+  </section>
+  <section id="process" class="clouds">    
+    <div class="container">
+      <div class="section-wrapper">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h2 class="text-center">The Hiring Process</h2>
+          <p class="text-center">Hiring well and building strong teams has been a driving factor in Socrata's success. The products we've built, the customers we've supported and the innovation we've created wouldn’t be possible without our talented employees. As Socrata continues to grow we are looking for individuals who embody our core values and will take us to the next level. If you’re ready to work with a remarkable team to improve the world through data transpar-ency, look no further. Here’s how we hire.</p>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+          <dl class="hiring-process">
+              <dt>Informational Phone Call <small>(optional)</small></dt>
+              <dd>If you have questions about Socrata, the role, the team or are still testing your level of interest, the hiring manager or a team member will likely schedule a 30 to 60 minute informational call with you. This is not a phone interview, but rather a chance for you to gather all the data you need before you interview. If you feel ready to go straight into the phone interview and get your questions answered there, we will skip this stage.</dd>
+              <dt>Phone Screens</dt>
+              <dd>Two phone interviews take place, one hour each. These are typically with the hiring manager and one other team member. These screens are to test against the core competencies of the job and to vet culture ﬁt.</dd>
+              <dt>Homework Assignment <small>(Engineers, Sales Engineers, Project Managers and UX Designers)</small></dt>
+              <dd>We will give you a homework assignment (for engineers we call this a "coding challenge") to get a better understanding of your hands on design or technical skills. This is not timed, and should take a few hours to complete. The Socrata team reviews the assignment and will let you know if we are going forward within 48 hours of submission. If successful, we’ll revisit your work in the onsite interview.</dd>
+              <dt>Onsite Interview</dt>
+              <dd>Please reserve four hours for the onsite interview, which will typically take place in the morning (9am - 1pm) or afternoon (1pm - 5pm). We often times pair two interviewers together, so you can expect to meet with one or two people each hour. The people you will meet with in person include the hiring manager, two members of the team you’ll potentially be joining, and a senior member of the business from another department. Sales and UX candidates can expect to do a presentation as a part of the onsite interview. Director and VP level candidates can expect their interview loop to last up ﬁve hours.  </dd>
+              <dt>Hiring Decision</dt>
+              <dd>Typically the team convenes within 24 hours of your interview to go over the feedback and determine whether we are moving forward with an oﬀer. We reach out to you within three business days of your in-person interview with the hiring decision. If adjustments need to be made to that timeline we will notify you within one day of your interview.</dd>
+              <dt>Welcome to the Team</dt>
+          </dl>
+        </div>
+      </div>
+    </div>
+    </div>
+    <?php echo do_shortcode( '[slantLeft color="#fff;"]' ); ?>
+  </section>
+  <section id="positions">
+    <div class="container">
+      <div class="section-wrapper">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+          <h2 class="text-center">Open Positions at Socrata</h2>
           <iframe id="jobviteframe" src="https://hire.jobvite.com/CompanyJobs/Careers.aspx?k=JobListing&amp;c=qCL9Vfwb&amp;v=1&amp;jvresize=https://careers.socrata.com/FrameResize.html" height="500" width="100%" frameborder="0" scrolling="no"></iframe>
           <script type="text/javascript">function resizeFrame(e,t){if(t)window.scrollTo(0,0);var n=document.getElementById("jobviteframe");if(n)n.height=e}var l=location.href;var args="";var k="";var iStart=l.indexOf("?jvk=");if(iStart==-1)iStart=l.indexOf("&jvk=");if(iStart!=-1){iStart+=5;var iEnd=l.indexOf("&",iStart);if(iEnd==-1)iEnd=l.length;k=l.substring(iStart,iEnd)}iStart=l.indexOf("?jvi=");if(iStart==-1)iStart=l.indexOf("&jvi=");if(iStart!=-1){iStart+=5;var iEnd=l.indexOf("&",iStart);if(iEnd==-1)iEnd=l.length;args+="&j="+l.substring(iStart,iEnd);if(!k.length)args+="&k=Job";var iStart=l.indexOf("?jvs=");if(iStart==-1)iStart=l.indexOf("&jvs=");if(iStart!=-1){iStart+=5;var iEnd=l.indexOf("&",iStart);if(iEnd==-1)iEnd=l.length;args+="&s="+l.substring(iStart,iEnd)}}iStart=l.indexOf("?jvsrc=");if(iStart==-1)iStart=l.indexOf("&jvsrc=");if(iStart!=-1){iStart+=7;var iEnd=l.indexOf("&",iStart);if(iEnd==-1)iEnd=l.length;args+="&jtsrc="+l.substring(iStart,iEnd)}if(k.length)args+="&k="+k;if(args.length)document.getElementById("jobviteframe").src+=args</script>
           </div>
