@@ -1,0 +1,98 @@
+html {
+  height:100%;
+}
+
+.home svg.video-break {
+  position:absolute;
+  left:0;
+  bottom:0;
+  z-index: 100;
+}
+.home .video-break .white-path {
+  fill: #3498db;
+  stroke: none;
+}
+.home .video-break .blue-path {
+  fill: #2c3e50;
+  stroke: none;
+}
+
+.home .backgroundVideo {
+  z-index: 4;
+  visibility: hidden;
+  top:0 !important;
+}
+.home #video_container {
+  width: 100%;
+  height: 500px !important;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  background:#3498db;
+}
+.home #text {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:6;
+  width:100%;
+  height: 100%;
+  text-align: center;
+}
+.home #playbutton {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.home #playbutton h1 {
+  font-weight: 600;
+  color:#fff;
+  max-width: 600px;
+  font-size: 50px;
+  margin:0 auto 30px auto;
+  text-shadow: 0px 0px 5px #999;
+}
+.home #cover_all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+}
+
+.home #main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  /*background-image: url(../images/main.jpg);*/
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.home .mission h1 {
+  margin-bottom:20px;
+}
+
+.home .mission-content {
+  max-width:800px;
+  margin:0 auto;
+  font-size:36px;
+  font-weight: 600;
+  padding:0 30px;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1024px) {
+  .home #main-image {
+    background-size: cover;
+  }
+}

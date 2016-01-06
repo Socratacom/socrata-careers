@@ -64,10 +64,10 @@ function disableAutoSave(){
 }
 
 // REMOVE MENU ITEM
-/*function remove_menus(){
+function remove_menus(){
   
   //remove_menu_page( 'index.php' );                  //Dashboard
-  //remove_menu_page( 'edit.php' );                   //Posts
+  remove_menu_page( 'edit.php' );                   //Posts
   //remove_menu_page( 'upload.php' );                 //Media
   //remove_menu_page( 'edit.php?post_type=page' );    //Pages
   //remove_menu_page( 'edit-comments.php' );          //Comments
@@ -78,5 +78,5 @@ function disableAutoSave(){
   //remove_menu_page( 'options-general.php' );        //Settings
   
 }
-add_action( 'admin_menu', 'remove_menus' );*/
+add_action( 'admin_menu', 'remove_menus' );
 

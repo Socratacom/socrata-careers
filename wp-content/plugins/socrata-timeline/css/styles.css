@@ -1,0 +1,419 @@
+.socrata-container, .timeline-btn-wrap {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.socrata-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.timeline-btn-wrap {
+    position: relative;
+    padding-top: 50px;
+}
+
+.timeline-btn {
+    border-radius: 5px;
+    background-color: #9d9da7;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.timeline-btn.now {
+   position: absolute;
+    top: 20px;
+    left: -18px;
+}
+
+.timeline-btn.launch {
+    position: absolute;
+    bottom: 20px;
+    left: -7px;
+}
+
+#socrata-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#socrata-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #2980B9;
+}
+@media only screen and (min-width: 1170px) {
+  #socrata-timeline {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #socrata-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+.timeline-date {
+  font-size:13px;
+}
+.timeline-text {
+  margin-top:15px;
+}
+.socrata-timeline-block h4 {
+  margin:5px 0;
+  font-size: 16px;
+}
+.socrata-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.socrata-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.socrata-timeline-block:first-child {
+  margin-top: 0;
+}
+.socrata-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .socrata-timeline-block h4 {
+    margin:0 0 5px 0;
+    font-size: 18px;
+  }
+  .socrata-timeline-block {
+    margin: 4em 0;
+  }
+  .socrata-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .socrata-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+  .timeline-btn-wrap {
+    padding-top: 0;
+    text-align: center;
+  }
+  .timeline-btn.now {
+    position: relative;
+    top: auto;
+    left:auto;
+
+  }
+  .timeline-btn.launch {
+    position: relative;
+    bottom: auto;
+    left:auto;
+    margin-bottom: 50px;
+  }
+}
+
+.socrata-timeline-dot {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #2980B9;
+}
+
+.socrata-timeline-image {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  border: 4px solid #fff;
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 1170px) {
+  .socrata-timeline-dot {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 23px;
+    margin-left: -10px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .socrata-timeline-image {
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    top: 0px;
+    margin-left: -35px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .cssanimations .socrata-timeline-dot.is-hidden, .cssanimations .socrata-timeline-image.is-hidden {
+    visibility: hidden !important;
+  }
+  .cssanimations .socrata-timeline-dot.bounce-in, .cssanimations .socrata-timeline-image.bounce-in {
+    visibility: visible;
+    -webkit-animation: socrata-bounce-1 0.6s;
+    -moz-animation: socrata-bounce-1 0.6s;
+    animation: socrata-bounce-1 0.6s;
+  }
+}
+
+@-webkit-keyframes socrata-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes socrata-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+  }
+
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@keyframes socrata-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.socrata-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: #2c3e50;
+  border-radius: 0.25em;
+  padding: 1em;
+  color:#fff;
+}
+
+.socrata-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+.socrata-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 10px solid transparent;
+  border-right: 10px solid #2c3e50;
+
+}
+@media only screen and (min-width: 1170px) {
+  .socrata-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+  }
+
+  .socrata-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #2c3e50;
+  }
+  .socrata-timeline-block:nth-child(even) .socrata-timeline-content {
+    float: right;
+  }
+  .socrata-timeline-block:nth-child(even) .socrata-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #2c3e50;
+  }
+  .socrata-timeline-block:nth-child(even) .socrata-timeline-content {
+    text-align: left;
+  }
+  .socrata-timeline-block:nth-child(odd) .socrata-timeline-content {
+    text-align: right;
+  }
+  .cssanimations .socrata-timeline-content.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .socrata-timeline-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: socrata-bounce-2 0.6s;
+    -moz-animation: socrata-bounce-2 0.6s;
+    animation: socrata-bounce-2 0.6s;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .socrata-timeline-block:nth-child(even) .socrata-timeline-content.bounce-in {
+    -webkit-animation: socrata-bounce-2-inverse 0.6s;
+    -moz-animation: socrata-bounce-2-inverse 0.6s;
+    animation: socrata-bounce-2-inverse 0.6s;
+  }
+}
+@-webkit-keyframes socrata-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes socrata-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+  }
+
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes socrata-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes socrata-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes socrata-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+  }
+
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes socrata-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
