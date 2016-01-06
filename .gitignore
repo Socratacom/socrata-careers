@@ -13,11 +13,7 @@ Thumbs.db
 # PHPStorm
 *.idea
 
-<<<<<<< HEAD
-# Ignore everything in the root except the "wp-content" directory.
-=======
 # Ignore everything in the root except the "wp-content" directory and the FrameResize.html.
->>>>>>> development
 /*
 !.gitignore
 !wp-content/
@@ -37,4 +33,3 @@ wp-content/plugins/*
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
 !wp-content/themes/socrata-bootstrap/
-!wp-content/themes/sage/
