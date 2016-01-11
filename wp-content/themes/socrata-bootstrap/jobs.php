@@ -78,8 +78,8 @@ get_header(); ?>
           <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/london.png" class="img-responsive" style="margin:auto;"></p>
             <h3 class="text-center">Socrata in London</h3>
-            <p class="text-center">14-22 Elder St.<br>London E1 6BT, UK</p>
-            <p class="text-center"><a href="https://goo.gl/maps/VKghj" target="_blank">View Map</a></p>
+            <p class="text-center">1 Primrose Street, #9027<br>London EC2A 2EX, United Kingdom</p>
+            <p class="text-center"><a href="https://goo.gl/maps/QbCUUmXFBGA2" target="_blank">View Map</a></p>
           </div>   
         </div>
       </div>
