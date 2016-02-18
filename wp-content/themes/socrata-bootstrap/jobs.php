@@ -26,31 +26,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
-  <section class="jovana recruiters">
-    <div class="container">
-      <div class="row">        
-        <div class="col-sm-6">
-          <div class="bubble">
-            <ul class="thumb-block">
-              <li class="hidden-sm hidden-md hidden-lg jovana-thumb"></li>
-              <li>
-                <h3>Meet Jovana Teodorovic</h3>
-                <p>Director of Talent</p>
-              </li> 
-            </ul>            
-            <p><i>"As the Director of Talent at Socrata, I partner with the leadership team to ensure the company attracts and retains the best talent in the nation. I get to work with exceptional people who are passionate about data, their customers and Socrata's road to greatness. Watching Socrata grow over the past year has been the highlight of my career and I can't wait to see what happens next!"</i></p>
-            <ul>
-              <li><i class="fa fa-envelope"></i> <a href="mailto:jovana.teodorovic@socrata.com">Contact Me</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-6"></div>
-      </div>
-    </div>
-    <?php echo do_shortcode('[slantLeft color="#fff"]'); ?>
-  </section>
-
-  <section class="locations">
+  <section class="locations" style="background-color:#ecf0f1;">
     <div class="container">
       <div class="section-wrapper">
         <h1 class="text-center">Our Offices</h1>
