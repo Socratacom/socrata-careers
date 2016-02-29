@@ -11,7 +11,7 @@
     </div>
     <div class="col-sm-2">
       <h3>Seattle</h3>
-      <p>83 S. King Street<br>Suite 107<br>Seattle WA, 98104</p>
+      <p>705 5th Ave S.<br>Suite #600<br>Seattle WA, 98104</p>
       <p><strong>T</strong> 206.340.8008</p>
     </div>
     <div class="col-sm-2">
