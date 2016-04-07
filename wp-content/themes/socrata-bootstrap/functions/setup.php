@@ -3,7 +3,7 @@
 function site_setup() {
   add_editor_style('css/editor-style.css');
   add_theme_support('post-thumbnails');
-	update_option('thumbnail_size_w', 170);
+	set_post_thumbnail_size( 360, 180, array( 'center', 'center')  );
   update_option('medium_size_w', 470);
   update_option('large_size_w', 970);
 }
