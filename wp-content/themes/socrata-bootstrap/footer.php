@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-      <div class="stacked-logo footer-logo"></div>
+      <div class="color-logo footer-logo"></div>
       <p class="copyright">Copyright &copy; <?php echo date('Y'); ?><br/>Socrata, Inc.<br/>All rights reserved.</p>
     </div>
     <div class="col-sm-2 hidden-xs">
@@ -30,5 +30,4 @@
 </div>
 </footer>
 <?php wp_footer(); ?>
-<script>new gnMenu( document.getElementById( 'gn-menu' ) );</script>
 </body>

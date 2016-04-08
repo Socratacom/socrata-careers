@@ -7,8 +7,10 @@ function script_enqueues()
   wp_enqueue_script( 'jquery' );
   wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, null);
   wp_enqueue_style('bootstrap-css');
-  wp_register_style('custom-css', get_template_directory_uri() . '/css/custom.css', false, null);
-  wp_enqueue_style('custom-css');
+
+  wp_register_style('styles-css', get_template_directory_uri() . '/css/styles.css', false, 1.1);
+  wp_enqueue_style('styles-css');
+
   wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600', false, null);
   wp_enqueue_style('google-fonts');
   wp_register_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, null);
@@ -23,8 +25,6 @@ function script_enqueues()
   wp_enqueue_script('bootstrap-js');
   wp_register_script('classie-js', get_template_directory_uri() . '/js/classie.js', false, null, true);
   wp_enqueue_script('classie-js');
-  wp_register_script('gnmenu-js', get_template_directory_uri() . '/js/gnmenu.js', false, null, true);
-  wp_enqueue_script('gnmenu-js');
   wp_register_script('jumplink-js', get_template_directory_uri() . '/js/smooth-jump-links.js', false, null, true);
   wp_enqueue_script('jumplink-js');
   // wp_register_script('smooth-scroll-js', get_template_directory_uri() . '/js/smooth-scrolling.js', false, null, true);
@@ -33,31 +33,7 @@ function script_enqueues()
 }
 add_action('wp_enqueue_scripts', 'script_enqueues', 100);
 
-// Targeted Scripts
-function homepage_scripts() {
-  if (is_page_template('homepage.php')) {
-    wp_register_style('homepage-css', get_template_directory_uri() . '/css/homepage.css', false, null);
-    wp_enqueue_style('homepage-css');
-  }
-}
-add_action('wp_enqueue_scripts', 'homepage_scripts');
 
-/* function brief_history_scripts() {
-  if (is_page('brief-history')) {
-    wp_register_script('smooth-scroll-js', get_template_directory_uri() . '/js/smooth-scrolling.js', false, null, true);
-    wp_enqueue_script('smooth-scroll-js');
-  }
-}
-add_action('wp_enqueue_scripts', 'brief_history_scripts');
-*/
-
-function jobs_scripts() {
-  if (is_page_template('jobs.php')) {    
-    wp_register_style('jobs-css', get_template_directory_uri() . '/css/jobs.css', false, null);
-    wp_enqueue_style('jobs-css');
-  }
-}
-add_action('wp_enqueue_scripts', 'jobs_scripts');
 
 function team_and_culture_scripts() {
   if (is_page('team-and-culture')) {
