@@ -8,7 +8,7 @@ function script_enqueues()
   wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, null);
   wp_enqueue_style('bootstrap-css');
 
-  wp_register_style('styles-css', get_template_directory_uri() . '/css/styles.css', false, 1.1);
+  wp_register_style('styles-css', get_template_directory_uri() . '/css/styles.min.css', false, 1.1);
   wp_enqueue_style('styles-css');
 
   wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600', false, null);
@@ -27,6 +27,8 @@ function script_enqueues()
   wp_enqueue_script('classie-js');
   wp_register_script('jumplink-js', get_template_directory_uri() . '/js/smooth-jump-links.js', false, null, true);
   wp_enqueue_script('jumplink-js');
+  wp_register_script('ytplayers', get_template_directory_uri() . '/js/jquery.mb.YTPlayer.min.js', false, null, true);
+  wp_enqueue_script('ytplayers');
   // wp_register_script('smooth-scroll-js', get_template_directory_uri() . '/js/smooth-scrolling.js', false, null, true);
   // wp_enqueue_script('smooth-scroll-js');
 
