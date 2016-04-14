@@ -8,7 +8,7 @@ function script_enqueues()
   wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, null);
   wp_enqueue_style('bootstrap-css');
 
-  wp_register_style('styles-css', get_template_directory_uri() . '/css/styles.min.css', false, 1.1);
+  wp_register_style('styles-css', get_template_directory_uri() . '/css/styles.min.css', false, 1.2);
   wp_enqueue_style('styles-css');
 
   wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600', false, null);
