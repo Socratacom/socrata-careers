@@ -41,8 +41,8 @@ get_header(); ?>
           <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/dc.png" class="img-responsive" style="margin:auto;"></p>
             <h3 class="text-center">Socrata in Washington, DC</h3>
-            <p class="text-center">1150 17th Street NW, Suite 200<br>Washington, D.C.</p>
-            <p class="text-center"><a href="https://goo.gl/maps/uY3g9" target="_blank">View Map</a></p>
+            <p class="text-center">1875 Connecticut Ave NW, Ste 600<br>Washington DC, 20009</p>
+            <p class="text-center"><a href="https://goo.gl/maps/awyQk4WU8bJ2" target="_blank">View Map</a></p>
           </div>
           <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/london.png" class="img-responsive" style="margin:auto;"></p>
@@ -53,32 +53,19 @@ get_header(); ?>
         </div>
       </div>
     </div>
-  </section> 
-
-  <section class="henry recruiters">
-    <div class="container">
-      <div class="row">        
-        <div class="col-sm-6"></div>
-        <div class="col-sm-6">
-          <div class="bubble">
-            <ul class="thumb-block">
-              <li class="hidden-sm hidden-md hidden-lg henry-thumb"></li>
-              <li>
-                <h3>Meet Henry Hippely</h3>
-                <p>Recruiter</p>
-              </li> 
-            </ul>
-            <p><i>"I chose to work at Socrata because of the combination of immensely talented people working on real world problems that will improve quality of life for all. Seeing everyone's passion on a daily basis is incredibly inspiring and not something you find often!"</i></p>
-            <ul>
-              <li><i class="fa fa-envelope"></i> <a href="mailto:henry.hippely@socrata.com">Contact Me</a></li>
-              <li><i class="fa fa-mobile"></i> (425) 785-2296</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <?php echo do_shortcode('[slantRight color="#fff"]'); ?>
   </section>
+  <section class="cta-jobs">
+    <div class="container">
+        <ul>
+            <li><div class="cta-stuart"><a href="http://snuffleupadata.com/" target="blank"></a></div></li>
+            <li><span>Still have questions?</span> Contact our HR Department.</li>
+            <li><a href="mailto:hr@socrata.com" class="btn btn-inverse">Email Us</a></li>
+        </ul>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="white-path" d="M0 0 L100 100 L0 100 Z"></path>
+    </svg>
+</section>
 </div>
 
 
