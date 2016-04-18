@@ -11,12 +11,12 @@
     </div>
     <div class="col-sm-2">
       <h3>Seattle</h3>
-      <p>705 5th Ave S.<br>Suite #600<br>Seattle WA, 98104</p>
+      <p>705 5th Ave S.<br>Suite 600<br>Seattle WA, 98104</p>
       <p><strong>T</strong> 206.340.8008</p>
     </div>
     <div class="col-sm-2">
       <h3>Washington DC</h3>
-      <p>1150 17th Street NW<br>Suite 200<br>Washington, D.C. 20036</p>
+      <p>1875 Connecticut Ave NW<br>Suite 715<br>Washington, D.C. 20009</p>
     </div>    
     <div class="col-sm-2">
       <h3>London</h3>
