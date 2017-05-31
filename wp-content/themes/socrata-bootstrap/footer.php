@@ -20,7 +20,7 @@
     </div>    
     <div class="col-sm-2">
       <h3>London</h3>
-      <p>14-22 Elder St.<br>London E1 6BT, UK</p>
+      <p>1 Primrose Street<br>London EC2A 2EX, UK</p>
     </div>   
     <div class="col-sm-2">
       <h3>Join Us</h3>
