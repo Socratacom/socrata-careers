@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="container">
       <div class="section-wrapper">
         <h1 class="text-center">We're Hiring</h1>
-        <h2 class="text-center">Do you have what it takes?</h2>
+        <h2 class="text-center">Come join us!</h2>
       </div>
     </div>
     <?php echo do_shortcode( '[slantLeft color="#fff;"]' ); ?>
