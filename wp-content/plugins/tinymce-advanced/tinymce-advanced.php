@@ -3,7 +3,7 @@
 Plugin Name: TinyMCE Advanced
 Plugin URI: http://www.laptoptips.ca/projects/tinymce-advanced/
 Description: Enables advanced features and plugins in TinyMCE, the visual editor in WordPress.
-Version: 4.3.8
+Version: 4.6.3
 Author: Andrew Ozz
 Author URI: http://www.laptoptips.ca/
 License: GPL2
@@ -24,15 +24,15 @@ Domain Path: /langs
 	You should have received a copy of the GNU General Public License along
 	with TinyMCE Advanced. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
 
-	Copyright 2007-2016 Andrew Ozz
+	Copyright (c) 2007-2016 Andrew Ozz. All rights reserved.
 */
 
 if ( ! class_exists('Tinymce_Advanced') ) :
 
 class Tinymce_Advanced {
 
-	private $required_version = '4.5-beta';
-	private $settings;
+	private $required_version = '4.7-beta';
+	private $user_settings;
 	private $admin_settings;
 	private $admin_options;
 	private $editor_id;
@@ -47,41 +47,78 @@ class Tinymce_Advanced {
 	private $used_buttons = array();
 	private $all_buttons = array();
 	private $buttons_filter = array();
+	private $fontsize_formats = '8px 10px 12px 14px 16px 20px 24px 28px 32px 36px 48px 60px 72px 96px';
+	
 
-	private $all_plugins = array(
-		'advlist',
-		'anchor',
-		'code',
-		'contextmenu',
-		'emoticons',
-		'importcss',
-		'insertdatetime',
-		'link',
-		'nonbreaking',
-		'print',
-		'searchreplace',
-		'table',
-		'visualblocks',
-		'visualchars',
-		'wptadv',
-	);
+	private function get_default_user_settings() {
+		return array(
+			'options'	=> 'menubar,advlist',
+			'toolbar_1' => 'formatselect,bold,italic,blockquote,bullist,numlist,alignleft,aligncenter,alignright,link,unlink,undo,redo',
+			'toolbar_2' => 'fontselect,fontsizeselect,outdent,indent,pastetext,removeformat,charmap,wp_more,forecolor,table,wp_help',
+			'toolbar_3' => '',
+			'toolbar_4' => '',
+			'plugins'   => 'anchor,code,insertdatetime,nonbreaking,print,searchreplace,table,visualblocks,visualchars,advlist,wptadv',
+		);
+	}
 
-	private $default_settings = array(
-		'options'	=> 'menubar,advlist',
-		'toolbar_1' => 'bold,italic,blockquote,bullist,numlist,alignleft,aligncenter,alignright,link,unlink,table,fullscreen,undo,redo,wp_adv',
-		'toolbar_2' => 'formatselect,alignjustify,strikethrough,outdent,indent,pastetext,removeformat,charmap,wp_more,emoticons,forecolor,wp_help',
-		'toolbar_3' => '',
-		'toolbar_4' => '',
-		'plugins'   => 'anchor,code,insertdatetime,nonbreaking,print,searchreplace,table,visualblocks,visualchars,emoticons,advlist',
-	);
+	private function get_default_admin_settings() {
+		return array(
+			'options' => array(),
+		);
+	}
 
-	private $default_admin_settings = array( 'options' => array() );
+	private function get_all_plugins() {
+		return array(
+			'advlist',
+			'anchor',
+			'code',
+			'contextmenu',
+			'emoticons',
+			'importcss',
+			'insertdatetime',
+			'link',
+			'nonbreaking',
+			'print',
+			'searchreplace',
+			'table',
+			'visualblocks',
+			'visualchars',
+			'wptadv',
+		);
+	}
+
+	private function get_all_user_options() {
+		return array(
+			'advlist',
+			'advlink',
+			'contextmenu',
+			'menubar',
+			'fontsize_formats',
+		);
+	}
+
+	private function get_all_admin_options() {
+		return array(
+			'importcss',
+			'no_autop',
+			'paste_images',
+		);
+	}
+
+	private function get_editor_locations() {
+		return array(
+			'edit_post_screen',
+			'rest_of_wpadmin',
+			'on_front_end',
+		);
+	}
 
 	public function __construct() {
-		// Don't run outside of WP
 		if ( ! defined('ABSPATH') ) {
 			return;
 		}
+
+		register_activation_hook( __FILE__, array( $this, 'check_plugin_version' ) );
 
 		add_action( 'plugins_loaded', array( $this, 'set_paths' ), 50 );
 
@@ -107,6 +144,8 @@ class Tinymce_Advanced {
 	}
 
 	public function disable_for_editor( $settings, $editor_id ) {
+		static $editor_style_added = false;
+
 		if ( empty( $this->admin_settings ) ) {
 			$this->load_settings();
 		}
@@ -131,11 +170,37 @@ class Tinymce_Advanced {
 			}
 		}
 
+		if ( ! $this->disabled_for_editor && ! $editor_style_added ) {
+			if ( $this->check_admin_setting( 'importcss' ) && $this->has_editor_style() !== 'present' ) {
+				add_editor_style();
+			}
+
+			$editor_style_added = true;
+		}
+
 		return $settings;
 	}
 
 	private function is_disabled() {
 		return $this->disabled_for_editor;
+	}
+
+	private function has_editor_style() {
+		if ( ! current_theme_supports( 'editor-style' ) ) {
+			return 'not-supporetd';
+		}
+
+		$editor_stylesheets = get_editor_stylesheets();
+
+		if ( is_array( $editor_stylesheets ) ) {
+			foreach ( $editor_stylesheets as $url ) {
+				if ( strpos( $url, 'editor-style.css' ) !== false ) {
+					return 'present';
+				}
+			}
+		}
+
+		return 'not-present';
 	}
 
 	// When using a plugin that changes the paths dinamically, set these earlier than 'plugins_loaded' 50.
@@ -172,32 +237,31 @@ class Tinymce_Advanced {
 	}
 
 	public function load_settings() {
-		if ( empty( $_POST ) ) {
-			$this->check_plugin_version();
+		if ( empty( $this->admin_settings ) ) {
+			$this->admin_settings = get_option( 'tadv_admin_settings', false );
 		}
 
-		if ( empty( $this->settings ) ) {
-			$this->admin_settings = get_option( 'tadv_admin_settings', false );
-			$this->settings = get_option( 'tadv_settings', false );
+		if ( empty( $this->user_settings ) ) {
+			$this->user_settings = get_option( 'tadv_settings', false );
 		}
 
 		// load defaults if the options don't exist...
 		if ( $this->admin_settings === false ) {
-			$this->admin_settings = $this->default_admin_settings;
+			$this->admin_settings = $this->get_default_admin_settings();
 		}
 
 		$this->admin_options = ! empty( $this->admin_settings['options'] ) ? explode( ',', $this->admin_settings['options'] ) : array();
 
-		if ( $this->settings === false ) {
-			$this->settings = $this->default_settings;
+		if ( $this->user_settings === false ) {
+			$this->user_settings = $this->get_default_user_settings();
 		}
 
-		$this->options   = ! empty( $this->settings['options'] )   ? explode( ',', $this->settings['options'] )   : array();
-		$this->plugins   = ! empty( $this->settings['plugins'] )   ? explode( ',', $this->settings['plugins'] )   : array();
-		$this->toolbar_1 = ! empty( $this->settings['toolbar_1'] ) ? explode( ',', $this->settings['toolbar_1'] ) : array();
-		$this->toolbar_2 = ! empty( $this->settings['toolbar_2'] ) ? explode( ',', $this->settings['toolbar_2'] ) : array();
-		$this->toolbar_3 = ! empty( $this->settings['toolbar_3'] ) ? explode( ',', $this->settings['toolbar_3'] ) : array();
-		$this->toolbar_4 = ! empty( $this->settings['toolbar_4'] ) ? explode( ',', $this->settings['toolbar_4'] ) : array();
+		$this->options   = ! empty( $this->user_settings['options'] )   ? explode( ',', $this->user_settings['options'] )   : array();
+		$this->plugins   = ! empty( $this->user_settings['plugins'] )   ? explode( ',', $this->user_settings['plugins'] )   : array();
+		$this->toolbar_1 = ! empty( $this->user_settings['toolbar_1'] ) ? explode( ',', $this->user_settings['toolbar_1'] ) : array();
+		$this->toolbar_2 = ! empty( $this->user_settings['toolbar_2'] ) ? explode( ',', $this->user_settings['toolbar_2'] ) : array();
+		$this->toolbar_3 = ! empty( $this->user_settings['toolbar_3'] ) ? explode( ',', $this->user_settings['toolbar_3'] ) : array();
+		$this->toolbar_4 = ! empty( $this->user_settings['toolbar_4'] ) ? explode( ',', $this->user_settings['toolbar_4'] ) : array();
 
 		$this->used_buttons = array_merge( $this->toolbar_1, $this->toolbar_2, $this->toolbar_3, $this->toolbar_4 );
 		$this->get_all_buttons();
@@ -242,15 +306,15 @@ class Tinymce_Advanced {
 		return ( version_compare( $wp_version, $this->required_version, '>=' ) );
 	}
 
-	private function check_plugin_version() {
+	public function check_plugin_version() {
 		$version = get_option( 'tadv_version', 0 );
 
 		if ( ! $version || $version < 4000 ) {
 			// First install or upgrade to TinyMCE 4.0
-			$this->settings = $this->default_settings;
-			$this->admin_settings = $this->default_admin_settings;
+			$this->user_settings = $this->get_default_user_settings();
+			$this->admin_settings = $this->get_default_admin_settings();
 
-			update_option( 'tadv_settings', $this->settings );
+			update_option( 'tadv_settings', $this->user_settings );
 			update_option( 'tadv_admin_settings', $this->admin_settings );
 			update_option( 'tadv_version', 4000 );
 		}
@@ -333,6 +397,8 @@ class Tinymce_Advanced {
 			'wp_help'		=> 'Keyboard Shortcuts',
 			'wp_more'		=> 'Read more...',
 			'wp_page'		=> 'Page break',
+
+			'tadv_mark'     => 'Mark',
 		);
 
 		// add/remove allowed buttons
@@ -376,20 +442,23 @@ class Tinymce_Advanced {
 		if ( in_array( 'searchreplace', $this->used_buttons, true ) )
 			$plugins[] = 'searchreplace';
 
-		if ( in_array( 'insertlayer', $this->used_buttons, true ) )
-			$plugins[] = 'layer';
+		if ( in_array( 'code', $this->used_buttons, true ) )
+			$plugins[] = 'code';
+
+	//	if ( in_array( 'insertlayer', $this->used_buttons, true ) )
+	//		$plugins[] = 'layer';
 
 		// From options
-		if ( $this->check_setting( 'advlist' ) )
+		if ( $this->check_user_setting( 'advlist' ) )
 			$plugins[] = 'advlist';
 
-		if ( $this->check_setting( 'advlink' ) )
+		if ( $this->check_user_setting( 'advlink' ) )
 			$plugins[] = 'link';
 
 		if ( $this->check_admin_setting( 'importcss' ) )
 			$plugins[] = 'importcss';
 
-		if ( $this->check_setting( 'contextmenu' ) )
+		if ( $this->check_user_setting( 'contextmenu' ) )
 			$plugins[] = 'contextmenu';
 
 		// add/remove used plugins
@@ -398,7 +467,7 @@ class Tinymce_Advanced {
 		return array_unique( $plugins );
 	}
 
-	private function check_setting( $setting ) {
+	private function check_user_setting( $setting ) {
 		if ( ! is_array( $this->options ) ) {
 			$this->load_settings();
 		}
@@ -505,22 +574,17 @@ class Tinymce_Advanced {
 			return $init;
 		}
 
+		$init['image_advtab'] = true;
+		$init['rel_list'] = '[{text: "None", value: ""}, {text: "Nofollow", value: "nofollow"}]';
+
 		if ( $this->check_admin_setting( 'no_autop' ) ) {
 			$init['wpautop'] = false;
-	//		$init['indent'] = true;
+			$init['indent'] = true;
 			$init['tadv_noautop'] = true;
 		}
 
-		if ( $this->check_setting('menubar') ) {
+		if ( $this->check_user_setting('menubar') ) {
 			$init['menubar'] = true;
-		}
-
-		if ( $this->check_setting('image') ) {
-			$init['image_advtab'] = true;
-		}
-
-		if ( $this->check_setting( 'advlink' ) ) {
-			$init['rel_list'] = '[{text: "None", value: ""}, {text: "Nofollow", value: "nofollow"}]';
 		}
 
 		if ( ! in_array( 'wp_adv', $this->toolbar_1, true ) ) {
@@ -532,12 +596,16 @@ class Tinymce_Advanced {
 			$init['importcss_file_filter'] = 'editor-style.css';
 		}
 
-		if ( $this->check_setting( 'fontsize_formats' ) ) {
-			$init['fontsize_formats'] =  '8px 10px 12px 14px 16px 20px 24px 28px 32px 36px 48px 60px';
+		if ( $this->check_user_setting( 'fontsize_formats' ) ) {
+			$init['fontsize_formats'] =  $this->fontsize_formats;
 		}
 
-		if ( $this->check_setting( 'paste_images' ) ) {
+		if ( $this->check_user_setting( 'paste_images' ) ) {
 			$init['paste_data_images'] = true;
+		}
+
+		if ( in_array( 'table', $this->plugins, true ) ) {
+			$init['table_toolbar'] = false;
 		}
 
 		return $init;
@@ -550,41 +618,13 @@ class Tinymce_Advanced {
 
 		?>
 		<script>
-		( function( tinymce ) {
-			if ( ! tinymce ) {
-				return;
-			}
-
-			var blocklist = 'table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre' +
-					'|form|map|area|blockquote|address|math|style|p|h[1-6]|hr|fieldset|legend|section' +
-					'|article|aside|hgroup|header|footer|nav|figure|figcaption|details|menu|summary',
-				tagOpenRe = new RegExp( '<(?:' + blocklist + ')(?: [^>]*)?>', 'gi' ),
-				tagCloseRe = new RegExp( '</(?:' + blocklist + ')>', 'gi' ),
-				$ = tinymce.$;
-
-			function addLineBreaks( html ) {
-				html = html.replace( tagOpenRe, '\n$&' );
-				html = html.replace( tagCloseRe, '$&\n' );
-				html = html.replace( /<br(?: [^>]*)?>/gi, '$&\n' );
-				html = html.replace( />\n\n</g, '>\n<' );
-				html = html.replace( /^<li/gm, '\t<li' );
-
-				return tinymce.trim( html );
-			}
-
-			tinymce.each( $( '.wp-editor-wrap' ), function( element ) {
-				var textarea, content;
-
-				if ( $( element ).hasClass( 'html-active' ) ) {
-					textarea = $( '.wp-editor-area', element )[0];
-					content = textarea && textarea.value;
-
-					if ( content && content.indexOf( '</p>' ) !== -1 && content.indexOf( '\n' ) === -1 ) {
-						textarea.value = addLineBreaks( content );
-					}
-				}
-			});
-		}( window.tinymce ));
+		!function(a,b){"undefined"!=typeof a&&"undefined"!=typeof b&&a(function(){b.addButton("sofbg-axcell","&para;",function(b,c){
+		var d=a(c),e=a.trim(d.val()),f="table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre|form|map|area|blockquote|" +
+		"address|math|style|p|h[1-6]|hr|fieldset|legend|tmadv|section|article|aside|hgroup|header|footer|nav|figure|figcaption|details|menu|summary";
+		-1!==e.indexOf("</p>")&&-1===e.indexOf("\n\n")&&(e=e.replace(new RegExp("<(?:"+f+")(?: [^>]*)?>","gi"),"\n$&"),
+		e=e.replace(new RegExp("</(?:"+f+")>","gi"),"$&\n"),e=e.replace(/(<br(?: [^>]*)?>)[\r\n\t]*/gi,"$1\n"),
+		e=e.replace(/>\n[\r\n\t]+</g,">\n<"),e=e.replace(/^<li/gm,"	<li"),e=e.replace(/<td>\u00a0<\/td>/g,"<td>&nbsp;</td>"),
+		d.val(a.trim(e)))},"","","Fix line breaks")})}(window.jQuery,window.QTags);
 		</script>
 		<?php
 	}
@@ -598,21 +638,13 @@ class Tinymce_Advanced {
 			return $mce_plugins;
 		}
 
-		// import user created editor-style.css
-		// Deprecated since
-		if ( $this->check_admin_setting( 'editorstyle' ) && ! current_theme_supports( 'editor-style' ) ) {
-			add_editor_style();
-		}
-
 		if ( ! is_array( $this->plugins ) ) {
 			$this->plugins = array();
 		}
 
-		if ( $this->check_admin_setting( 'no_autop' ) ) {
-			$this->plugins[] = 'wptadv';
-		}
+		$this->plugins[] = 'wptadv';
 
-		$this->plugins = array_intersect( $this->plugins, $this->all_plugins );
+		$this->plugins = array_intersect( $this->plugins, $this->get_all_plugins() );
 
 		$plugpath = TADV_URL . 'mce/';
 		$mce_plugins = (array) $mce_plugins;
@@ -630,7 +662,7 @@ class Tinymce_Advanced {
 			return $plugins;
 		}
 
-		if ( $this->check_setting('image') && ! in_array( 'image', $plugins, true ) ) {
+		if ( in_array( 'image', $this->used_buttons, true ) && ! in_array( 'image', $plugins, true ) ) {
 			$plugins[] = 'image';
 		}
 
@@ -680,6 +712,128 @@ class Tinymce_Advanced {
 		}
 
 		return $_settings;
+	}
+
+	private function validate_settings( $settings, $checklist ) {
+		if ( empty( $settings ) ) {
+			return '';
+		} elseif ( is_string( $settings ) ) {
+			$settings = explode( ',', $settings );
+		} elseif ( ! is_array( $settings ) ) {
+			return '';
+		}
+
+		$_settings = array();
+
+		foreach ( $settings as $value ) {
+			if ( in_array( $value, $checklist, true ) ) {
+				$_settings[] = $value;
+			}
+		}
+
+		return implode( ',', $_settings );
+	}
+
+	private function save_settings( $all_settings = null ) {
+		$settings = $user_settings = array();
+
+		if ( empty( $this->buttons_filter ) ) {
+			$this->get_all_buttons();
+		}
+
+		if ( ! empty( $all_settings['settings'] ) ) {
+			$user_settings = $all_settings['settings'];
+		}
+
+		for ( $i = 1; $i < 5; $i++ ) {
+			$toolbar_name = 'toolbar_' . $i;
+
+			if ( ! empty( $user_settings[ $toolbar_name ] ) ) {
+				$toolbar = explode( ',', $user_settings[ $toolbar_name ] );
+			} elseif ( ! empty( $_POST[ $toolbar_name ] ) && is_array( $_POST[ $toolbar_name ] ) ) {
+				$toolbar = $_POST[ $toolbar_name ];
+			} else {
+				$toolbar = array();
+			}
+
+			if ( $i > 1 && ( $wp_adv = array_search( 'wp_adv', $toolbar ) ) !== false ) {
+				unset( $toolbar[ $wp_adv ] );
+			}
+
+			$settings[ $toolbar_name ] = $this->validate_settings( $toolbar, $this->buttons_filter );
+		}
+
+		if ( ! empty( $user_settings['options'] ) ) {
+			$options = explode( ',', $user_settings['options'] );
+		} elseif ( ! empty( $_POST['options'] ) && is_array( $_POST['options'] ) ) {
+			$options = $_POST['options'];
+		} else {
+			$options = array();
+		}
+
+		$settings['options'] = $this->validate_settings( $options, $this->get_all_user_options() );
+
+		if ( ! empty( $user_settings['plugins'] ) ) {
+			$plugins = explode( ',', $user_settings['plugins'] );
+		} elseif ( ! empty( $_POST['options']['menubar'] ) ) {
+			$plugins = array( 'anchor', 'code', 'insertdatetime', 'nonbreaking', 'print', 'searchreplace', 'table', 'visualblocks', 'visualchars' );
+		} else {
+			$plugins = array();
+		}
+
+		// Merge the submitted plugins with plugins needed for the buttons.
+		$this->user_settings = $settings;
+		$this->load_settings();
+		$plugins = $this->get_plugins( $plugins );
+
+		$settings['plugins'] = $this->validate_settings( $plugins, $this->get_all_plugins() );
+
+		$this->user_settings = $settings;
+		$this->load_settings();
+
+		// Save the new settings.
+		update_option( 'tadv_settings', $settings );
+
+		if ( ! is_multisite() || current_user_can( 'manage_sites' ) ) {
+			$this->save_admin_settings( $all_settings );
+		}
+	}
+
+	private function save_admin_settings( $all_settings = null ) {
+		$admin_settings = $save_admin_settings = array();
+
+		if ( ! empty( $all_settings['admin_settings'] ) ) {
+			$admin_settings = $all_settings['admin_settings'];
+		}
+
+		if ( ! empty( $admin_settings ) ) {
+			if ( ! empty( $admin_settings['options'] ) ) {
+				$save_admin_settings['options'] = $this->validate_settings( $admin_settings['options'], $this->get_all_admin_options() );
+			} else {
+				$save_admin_settings['options'] = '';
+			}
+
+			$disabled_editors = array_intersect( $this->get_editor_locations(), explode( ',', $admin_settings['disabled_editors'] ) );
+		} elseif ( isset( $_POST['tadv-save'] ) ) {
+			if ( ! empty( $_POST['admin_options'] ) && is_array( $_POST['admin_options'] ) ) {
+				$save_admin_settings['options'] = $this->validate_settings( $_POST['admin_options'], $this->get_all_admin_options() );
+			}
+
+			if ( ! empty( $_POST['tadv_enable_at'] ) && is_array( $_POST['tadv_enable_at'] ) ) {
+				$tadv_enable_at = $_POST['tadv_enable_at'];
+			} else {
+				$tadv_enable_at = array();
+			}
+
+			$disabled_editors = array_diff( $this->get_editor_locations(), $tadv_enable_at );
+		} else {
+			return;
+		}
+
+		$save_admin_settings['disabled_editors'] = implode( ',', $disabled_editors );
+
+		$this->admin_settings = $save_admin_settings;
+		update_option( 'tadv_admin_settings', $save_admin_settings );
 	}
 
 	public function settings_page() {
