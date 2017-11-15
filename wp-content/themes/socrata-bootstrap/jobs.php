@@ -34,13 +34,13 @@ get_header(); ?>
     <div class="container">
       <div class="section-wrapper">
         <h1 class="text-center">Our Offices</h1>
-        <p class="text-center narrow-content" style="margin-bottom:1.63em">Socrata is located in Seattle WA, Washington DC, and London UK. These cities offer a vibrant exciting lifestyle and are a great place to work. Our offices are located next to numerous amenities.</p>       
+        <p class="text-center narrow-content" style="margin-bottom:1.63em">Socrata is located in Seattle WA, Washington DC, and London UK. These cities offer a vibrant, exciting lifestyle and are a great place to work. Our offices are located next to numerous amenities.</p>       
         <div class="row">
           <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/seattle.png" class="img-responsive" style="margin:auto;"></p>
             <h3 class="text-center">Socrata in Seattle</h3>
             <p class="text-center">705 5th Ave S., Suite 600<br>Seattle WA, 98104</p>
-            <p class="text-center"><a href="https://goo.gl/maps/jCDY2r1DkHk" target="_blank">View Map</a><br><a href="/wp-content/uploads/2015/04/MovingToSeattle_DS_R2.pdf">Download Moving to Seattle</a></p>
+            <p class="text-center"><a href="https://goo.gl/maps/jCDY2r1DkHk" target="_blank">View Map</a></p>
           </div>
           <div class="col-sm-4">
             <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/dc.png" class="img-responsive" style="margin:auto;"></p>
