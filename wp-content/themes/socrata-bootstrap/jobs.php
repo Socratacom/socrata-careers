@@ -30,34 +30,21 @@ get_header(); ?>
       </div>
     </div>
   </section>
-  <section class="locations" style="background-color:#ecf0f1;">
+  <section class="section-wrapper" style="background-color:#ecf0f1;">
     <div class="container">
-      <div class="section-wrapper">
-        <h1 class="text-center">Our Offices</h1>
-        <p class="text-center narrow-content" style="margin-bottom:1.63em">Socrata is located in Seattle WA, Washington DC, and London UK. These cities offer a vibrant, exciting lifestyle and are a great place to work. Our offices are located next to numerous amenities.</p>       
-        <div class="row">
-          <div class="col-sm-4">
-            <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/seattle.png" class="img-responsive" style="margin:auto;"></p>
-            <h3 class="text-center">Socrata in Seattle</h3>
-            <p class="text-center">705 5th Ave S., Suite 600<br>Seattle WA, 98104</p>
-            <p class="text-center"><a href="https://goo.gl/maps/jCDY2r1DkHk" target="_blank">View Map</a></p>
-          </div>
-          <div class="col-sm-4">
-            <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/dc.png" class="img-responsive" style="margin:auto;"></p>
-            <h3 class="text-center">Socrata in Washington, DC</h3>
-            <p class="text-center">1875 Connecticut Ave NW, Suite 715<br>Washington DC, 20009</p>
-            <p class="text-center"><a href="https://goo.gl/maps/awyQk4WU8bJ2" target="_blank">View Map</a></p>
-          </div>
-          <div class="col-sm-4">
-            <p class="text-center"><img src="/wp-content/themes/socrata-bootstrap/images/london.png" class="img-responsive" style="margin:auto;"></p>
-            <h3 class="text-center">Socrata in London</h3>
-            <p class="text-center">1 Primrose Street, #9027<br>London EC2A 2EX, United Kingdom</p>
-            <p class="text-center"><a href="https://goo.gl/maps/QbCUUmXFBGA2" target="_blank">View Map</a></p>
-          </div>   
-        </div>
-      </div>
+    	<div class="row">
+    		<div class="col-sm-12 text-center">
+    			<h1>Careers at Tyler Technologies</h1>
+    			<div class="tyler-logo" style="width:250px; height:100px; display:inline-block; margin-bottom:1.63em"></div>
+    			<p class="narrow-content" style="margin-bottom:4rem">Who are we? We’re a software company! But we are unlike any software company you’ve ever heard of. All of our clients are local government clients. That’s right — it’s our mission to make local and state government more accessible, efficient and connected. We are helping our clients improve the communities in which we all live and work.</p> 
+    			<p><a href="https://www.tylertech.com/careers" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary">View All Jobs</a></p>
+    			
+    		</div>
+    	</div>
     </div>
   </section>
+
+
   <section class="cta-jobs">
     <div class="container">
         <ul>

@@ -10,6 +10,5 @@ get_header(); ?>
   <?php endif;?>
 </div>
 <div id="ex"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:#fff;"></span></div>
-<div id="wistia_of3560a3ee" class="wistia_embed overlayVideo" ></div>
 <?php get_template_part( 'call-to-action' ); ?>
 <?php get_footer(); ?>

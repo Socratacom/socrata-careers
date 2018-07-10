@@ -29,15 +29,11 @@
         </button>
         <a class="logo header-logo" href="<?php echo home_url('/'); ?>"></a>
       </div>
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/team-and-culture">Team &amp; Culture</a></li>
-          <li><a href="/brief-history">Brief History</a></li>
-          <li><a href="/engineers">Engineers</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li class="hidden-xs hidden-sm"><a href="https://socrata.com" class="btn btn-default">Back to Socrata.com</a></li>
+          <li style="border:none;"><a href="/jobs">Jobs</a></li>
+          <li class="hidden-xs hidden-sm" style="margin-left:15px;"><a href="https://socrata.com" class="btn btn-default">Back to Socrata.com</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
