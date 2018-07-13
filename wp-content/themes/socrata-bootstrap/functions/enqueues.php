@@ -32,7 +32,3 @@ function script_enqueues()
 
 }
 add_action('wp_enqueue_scripts', 'script_enqueues', 100);
-
-
-
-

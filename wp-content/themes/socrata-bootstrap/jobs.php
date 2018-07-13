@@ -43,14 +43,12 @@ get_header(); ?>
     	</div>
     </div>
   </section>
-
-
   <section class="cta-jobs">
     <div class="container">
         <ul>
             <li><div class="cta-stuart"><a href="http://snuffleupadata.com/" target="blank"></a></div></li>
             <li><span>Still have questions?</span> Contact our HR Department.</li>
-            <li><a href="mailto:hr@socrata.com" class="btn btn-inverse">Email Us</a></li>
+            <li><a href="mailto:DI-hr@tylertech.com" class="btn btn-inverse">Email Us</a></li>
         </ul>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none">
